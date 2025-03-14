@@ -7,4 +7,5 @@ init:
 	@echo "\033[94m[INFO]\033[0m Git hooks build completed successfully!"
 	@echo "\033[94m[INFO]\033[0m Installing npm dependencies..."
 	@npm install
-	@echo "\033[94m[INFO]\033[0m Completed to install npm dependencies..."
+	@echo "\033[94m[INFO]\033[0m \033[92m✔\033[0m Completed installing npm dependencies."
+	@echo "\033[94m[INFO]\033[0m 🎉 Directory initialization completed successfully 🎉"
