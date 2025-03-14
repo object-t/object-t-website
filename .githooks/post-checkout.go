@@ -63,12 +63,12 @@ func getCurrentBranch() (string, error) {
 }
 
 func containsIssueNumber(branch string) (int, error) {
-	pattern := `^\w+/\d+-.+?`
+	pattern := `^\w+/\d+(-.+)?`
 	matched, _ := regexp.MatchString(pattern, branch)
 	if !matched {
 		return -1, nil
 	}
-	return strconv.Atoi(regexp.MustCompile(`/(\d+)-`).FindStringSubmatch(branch)[1])
+	return strconv.Atoi(regexp.MustCompile(`/(\d+)-?`).FindStringSubmatch(branch)[1])
 }
 
 func showIssueInfo(issueId int) {
@@ -91,7 +91,7 @@ func showIssueInfo(issueId int) {
 		return
 	}
 
-	fmt.Printf("\033[94m[INFO]\033[0m ISSUE #%sの情報\n")
+	fmt.Printf("\033[94m[INFO]\033[0m ISSUE #%dの情報\n", issue.Number)
 	fmt.Println("----------")
 	fmt.Printf("Issue    : %d\n", issue.Number)
 	fmt.Printf("Title    : %s\n", issue.Title)

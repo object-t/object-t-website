@@ -40,6 +40,29 @@ $ npm run storybook
 $ npm run build
 ```
 
+### Git関連
+コミットやブランチを作成する際は以下のルールを守ってください。
+```markdown
+## コミットメッセージ
+- 以下のPrefixを追加すること。
+`"feat", "add", "update", "delete", "revert", "fix", "refactor", "chore", "test", "style"`
+> 例: add: Add README.md
+
+## ブランチ名
+- 基本はdevelopからブランチを生やしてください。
+- 以下のPrefixを使用することを推奨しています。
+`"feature", "fix", "hotfix", "chore", "ci", "refactor", "docs", "style", "test", "main", "develop", "release", "revert"`
+- 作業する際はissueを立て、以下の例のようにブランチ名にissue番号を入れること。
+> 例: feature/3-login-form (issue番号が#3の場合)
+
+## ブランチ保護
+main: ❌直接プッシュ不可
+      📝他人のレビューが1以上必要
+
+develop: ❌直接プッシュ不可
+         ⭕️できるだけ他人にレビューをもらうように
+```
+
 ### ディレクトリ概要
 ```bash
 .
