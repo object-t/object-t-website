@@ -5,3 +5,6 @@ init:
 	@printf "\033[91m[-]\033[0m psot-checkout\r"
 	@go build -o ./.git/hooks/post-checkout ./.githooks/post-checkout.go && printf "\033[92m[✔]\033[0m post-checkout\n"
 	@echo "\033[94m[INFO]\033[0m Git hooks build completed successfully!"
+	@echo "\033[94m[INFO]\033[0m Installing npm dependencies..."
+	@npm install
+	@echo "\033[94m[INFO]\033[0m Completed to install npm dependencies..."
