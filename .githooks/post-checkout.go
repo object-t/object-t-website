@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"os/exec"
 	"regexp"
 	"slices"
 	"strconv"
@@ -26,9 +27,13 @@ type User struct {
 }
 
 func main() {
-	currentBranch := os.Args[2]
+	currentBranch, err := getCurrentBranch()
+	if err != nil {
+		fmt.Printf("\033[91m[Error] ブランチ名が取得できませんでした。\033[0m\n")
+		os.Exit(1)
+	}
 
-	fmt.Printf("ブランチが変更されたよ！%s", currentBranch)
+	fmt.Printf("ブランチが変更されたよ！%s\n", currentBranch)
 	splited := strings.Split(currentBranch, "/")
 	if len(splited) < 1 {
 		fmt.Printf("\033[91m[Error] ブランチ名が命名規則に則っていません。\033[0m\n")
@@ -45,6 +50,17 @@ func main() {
 	if err == nil && 0 < issue {
 		showIssueInfo(issue)
 	}
+}
+
+func getCurrentBranch() (string, error) {
+	cmd := exec.Command("git", "rev-parse", "--abbrev-ref", "HEAD")
+
+	output, err := cmd.Output()
+	if err != nil {
+		return "", err
+	}
+
+	return strings.TrimSpace(string(output)), nil
 }
 
 func containsIssueNumber(branch string) (int, error) {
