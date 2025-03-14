@@ -43,9 +43,11 @@ $ npm run build
 ### ディレクトリ概要
 ```bash
 .
-├── .githooks # git hooksの内容が含まれています。
-├── app # Reactプロジェクトのルートディレクトリ
-│   └── routes # react-rotuer 関連のディレクトリ
-│   
-└── public # Reactで静的ファイルを保管する場所
+├── .githooks # git hooksのロジック保管場所
+├── .storybook # storybookの設定関連
+├── app # Reactプロジェクト
+│   └── routes # react-router関連
+├── public # Reactで使う静的ファイル
+└── stories # storiesで管理するコンポーネント群
+    └── assets # storiesで使用するasset類
 ```

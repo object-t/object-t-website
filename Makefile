@@ -10,3 +10,6 @@ init:
 	@npm install
 	@echo "\033[94m[INFO]\033[0m \033[92m✔\033[0m Completed installing npm dependencies."
 	@echo "\033[94m[INFO]\033[0m 🎉 Directory initialization completed successfully 🎉"
+
+tree:
+	@tree -da -I "node_modules|.git|.react-router"
