@@ -12,7 +12,7 @@ import (
 	"strings"
 )
 
-var recommendedBranchPrefix = []string{"feature", "fix", "hotfix", "chore", "ci", "refactor", "docs", "style", "test", "release", "revert"}
+var recommendedBranchPrefix = []string{"feature", "fix", "hotfix", "chore", "ci", "refactor", "docs", "style", "test", "main", "develop", "release", "revert"}
 
 type Issue struct {
 	Number    int    `json:"number"`
