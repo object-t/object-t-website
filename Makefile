@@ -6,6 +6,7 @@ init:
 	@go build -o ./.git/hooks/post-checkout ./.githooks/post-checkout.go && printf "\033[92m[✔]\033[0m post-checkout\n"
 	@echo "\033[94m[INFO]\033[0m Git hooks build completed successfully!"
 	@echo "\033[94m[INFO]\033[0m Installing npm dependencies..."
+	@rm -rf node_modules
 	@npm install
 	@echo "\033[94m[INFO]\033[0m \033[92m✔\033[0m Completed installing npm dependencies."
 	@echo "\033[94m[INFO]\033[0m 🎉 Directory initialization completed successfully 🎉"
