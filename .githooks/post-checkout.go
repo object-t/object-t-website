@@ -91,7 +91,7 @@ func showIssueInfo(issueId int) {
 		return
 	}
 
-	fmt.Printf("\033[94m[INFO]\033[0m ISSUE #%sの情報\n")
+	fmt.Printf("\033[94m[INFO]\033[0m ISSUE #%dの情報\n", issue.Number)
 	fmt.Println("----------")
 	fmt.Printf("Issue    : %d\n", issue.Number)
 	fmt.Printf("Title    : %s\n", issue.Title)
