@@ -33,7 +33,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Printf("ブランチが変更されたよ！%s\n", currentBranch)
 	splited := strings.Split(currentBranch, "/")
 	if len(splited) < 1 {
 		fmt.Printf("\033[91m[Error] ブランチ名が命名規則に則っていません。\033[0m\n")
@@ -42,8 +41,8 @@ func main() {
 	}
 
 	prefix := strings.Split(currentBranch, "/")[0]
-	if slices.Contains(recommendedBranchPrefix, prefix) {
-		fmt.Printf("\033[93m[WORNING] %sは非推奨のPrefixです。\033[0m", prefix)
+	if !slices.Contains(recommendedBranchPrefix, prefix) {
+		fmt.Printf("\033[93m[WORNING]\033[0m %sは非推奨のPrefixです。\n", prefix)
 	}
 
 	issue, err := containsIssueNumber(currentBranch)
@@ -73,7 +72,7 @@ func containsIssueNumber(branch string) (int, error) {
 }
 
 func showIssueInfo(issueId int) {
-	url := fmt.Sprintf("https://api.github.com/repos/object-t/object-t-website/issues/%s", issueId)
+	url := fmt.Sprintf("https://api.github.com/repos/object-t/object-t-website/issues/%d", issueId)
 	resp, err := http.Get(url)
 	if err != nil {
 		fmt.Printf("\033[91m[Error] 正常にリクエストを送信できませんでした。\033[0m\n")
@@ -94,7 +93,7 @@ func showIssueInfo(issueId int) {
 
 	fmt.Printf("\033[94m[INFO]\033[0m ISSUE #%sの情報\n")
 	fmt.Println("----------")
-	fmt.Printf("Issue    : %s\n", issue.Number)
+	fmt.Printf("Issue    : %d\n", issue.Number)
 	fmt.Printf("Title    : %s\n", issue.Title)
 	fmt.Printf("State    : %s\n", issue.State)
 	fmt.Printf("Created  : %s\n", issue.User.Login)
