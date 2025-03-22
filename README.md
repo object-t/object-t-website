@@ -40,9 +40,8 @@ $ npm run storybook
 $ npm run build
 ```
 
-### Git関連
+# Git関連
 コミットやブランチを作成する際は以下のルールを守ってください。
-```markdown
 ## コミットメッセージ
 - 以下のPrefixを追加すること。
 `"feat", "add", "update", "delete", "revert", "fix", "refactor", "chore", "test", "style"`
@@ -81,7 +80,6 @@ main: ❌直接プッシュ不可
 
 develop: ❌直接プッシュ不可
          ⭕️できるだけ他人にレビューをもらうように
-```
 
 ### ディレクトリ概要
 ```bash
