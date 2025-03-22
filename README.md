@@ -55,6 +55,26 @@ $ npm run build
 - 作業する際はissueを立て、以下の例のようにブランチ名にissue番号を入れること。
 > 例: feature/3-login-form (issue番号が#3の場合)
 
+## GitHooksについて
+- `make init`を実行することで、`.git/hooks`に`.githook/`内のファイルがビルドされます。
+### commit-msg.go
+- コミットメッセージにバリデーションが追加されます。
+### post-checkout.go
+- ブランチ変更時にバリデーションが追加されます。
+- feature/{issue-id}のようになっている場合、checkoutしたときに以下のようにissue情報が出力されます。
+```
+$ git switch feature/13-about-githooks 
+Switched to a new branch 'feature/13-about-githooks'
+[INFO] ISSUE #13の情報
+----------
+Issue    : 13
+Title    : [Add] README.mdに.githooks関連について記載する
+State    : open
+Created  : naoido
+Assignees: naoido
+----------
+```
+
 ## ブランチ保護
 main: ❌直接プッシュ不可
       📝他人のレビューが1以上必要
