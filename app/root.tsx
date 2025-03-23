@@ -7,6 +7,7 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import 'devicon/devicon.min.css';
 import type { Route } from "./+types/root";
 import "./app.css";
 
