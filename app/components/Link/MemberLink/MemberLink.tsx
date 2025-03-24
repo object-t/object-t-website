@@ -10,7 +10,7 @@ export const MemberLink = ({
     ...props
 }: MemberLinkProps) => {
     return (
-        <a {...props}>
+        <a href='#' {...props}>
             <span className="label">{label}</span>
         </a>
     );

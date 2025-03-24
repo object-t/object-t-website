@@ -11,7 +11,7 @@ export const HomeLink = ({
     ...props
 }: HomeLinkProps) => {
     return (
-        <a {...props}>
+        <a href='#' {...props}>
             <span className="label">{label}</span>
         </a>
     );

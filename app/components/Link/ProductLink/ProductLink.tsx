@@ -10,7 +10,7 @@ export const ProductLink = ({
     ...props
 }: ProductLinkProps) => {
     return (
-        <a {...props}>
+        <a href='#' {...props}>
             <span className="label">{label}</span>
         </a>
     );

@@ -10,7 +10,7 @@ export const BlogLink = ({
     ...props
 }: BlogLinkProps) => {
     return (
-        <a {...props}>
+        <a href='#' {...props}>
             <span className="label">{label}</span>
         </a>
     );
