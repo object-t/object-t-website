@@ -15,3 +15,6 @@ init:
 
 tree:
 	@tree -da -I "node_modules|.git|.react-router"
+
+test:
+	@npx eslint

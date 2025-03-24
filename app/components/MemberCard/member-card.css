@@ -1,0 +1,92 @@
+.container {
+  width: 435px;
+  background-color: var(--accent-color);
+}
+
+.header {
+  height: 166px;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.header::after {
+  content: "";
+  background-color: #0000003d;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.icon {
+  position: absolute;
+  height: 106px;
+  width: 106px;
+  border-radius: 100%;
+  bottom: -53px;
+  background-size: cover;
+  box-shadow: #afafaf 0 4px 4px;
+}
+
+.name {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  margin-top: 64px;
+  letter-spacing: 1px;
+  color: var(--main-text-color);
+}
+
+.role {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: var(--main-text-color);
+}
+
+.description {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 28px;
+  letter-spacing: 1px;
+  color: var(--main-text-color);
+}
+
+.stack-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 27px;
+  color: var(--grey-text-color);
+}
+
+.stack-container {
+  height: 50px;
+  width: 100%;
+  border-bottom: solid 1px var(--based-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stack-container > * {
+  margin: 0 8px;
+}
+
+.github-container {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.github-username {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  margin-left: 8px;
+  color: var(--main-text-color);
+}

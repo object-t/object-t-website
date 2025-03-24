@@ -1,8 +1,16 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+:root {
+  --main-text-color: #242525;
+  --grey-text-color: #9D9F9F;
+  --accent-color: #F5F5F5;
+  --based-color: #242525;
 }
 
 html,
@@ -12,4 +20,6 @@ body {
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
+
+  font-family: "Noto Sans JP";
 }
