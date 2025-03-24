@@ -1,6 +1,5 @@
 
 import { Tooltip } from '../Tooltip/Tooltip';
-import './devicon.css';
 
 export interface DeviconProps {
   icon: string;
@@ -10,17 +9,21 @@ export interface DeviconProps {
   className?: string;
 }
 
+const abbreviation: Record<string, string> = {
+  "aws": "amazonwebservices",
+}
+
 export const Devicon = ({
   icon,
   tooltip = 'enable',
-  color = "#242525",
+  color = "var(--based-color)",
   size = "20px",
   className = "",
   ...props
 }: DeviconProps) => {
   const Icon = (
     <i
-      className={`devicon-${icon}-plain ${className}`}
+      className={`devicon-${abbreviation[icon] ?? icon}-plain ${className}`}
       style={{ color, fontSize: size }}
       {...props}
     />
