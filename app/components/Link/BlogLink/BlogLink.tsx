@@ -3,7 +3,6 @@ import './BlogLink.css';
 
 export interface BlogLinkProps {
     label: string;
-    onClick: () => void;
 }
 
 export const BlogLink = ({

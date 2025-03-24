@@ -4,7 +4,6 @@ import './HomeLink.css';
 
 export interface HomeLinkProps {
     label: string;
-    onClick: () => void;
 }
 
 export const HomeLink = ({

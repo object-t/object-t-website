@@ -3,7 +3,6 @@ import './MemberLink.css';
 
 export interface MemberLinkProps {
     label: string;
-    onClick: () => void;
 }
 
 export const MemberLink = ({
@@ -11,8 +10,8 @@ export const MemberLink = ({
     ...props
 }: MemberLinkProps) => {
     return (
-        <button {...props}>
+        <a {...props}>
             <span className="label">{label}</span>
-        </button>
+        </a>
     );
 }
