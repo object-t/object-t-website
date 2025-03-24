@@ -1,4 +1,4 @@
-
+import { useTranslation } from 'react-i18next';
 import { Devicon } from '../Devicon/Devicon';
 import './member-card.css';
 
@@ -22,6 +22,8 @@ export const MemberCard = ({
   githubName,
   ...props
 }: MemberCardProps) => {
+  const { t } = useTranslation();
+
   return (
     <div 
       className='container'
@@ -40,7 +42,7 @@ export const MemberCard = ({
         <h1 className='name'>{ name }</h1>
         <h2 className='role'>{ role }</h2>
         <p className='description'>{ description }</p>
-        <p className='stack-title'>得意技術</p>
+        <p className='stack-title'>{ t("card.memberCard.stack") }</p>
         <div className='stack-container'>
           {
             stacks.map((stack, i) => (
