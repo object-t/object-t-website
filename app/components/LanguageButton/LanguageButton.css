@@ -1,0 +1,27 @@
+.label {
+    color: #F5F5F5;
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 100%;
+    position: relative;
+    font-family: 'Tilt Warp', sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    letter-spacing: 0.05em;
+    text-align: center;
+    width: 35px;
+    height: 28px;
+}
+
+button {
+    background: transparent;
+    border: 1px solid #9D9F9F;
+    border-radius: 5px;
+    padding: 0;
+    cursor: pointer;
+    width: 144px;
+    height: 55px;
+    position: absolute;
+    top: 30px;
+    left: 1704px;
+}

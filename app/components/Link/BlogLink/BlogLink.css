@@ -1,0 +1,46 @@
+.label {
+    color: #9D9F9F;
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 100%;
+    position: relative;
+    font-family: 'Tilt Warp', sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    letter-spacing: 0.05em;
+    width: 79px;
+    height: 38px;
+    text-align: center;
+    vertical-align: middle;
+    transition: color 0.3s ease;
+}
+
+.label::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #F5F5F5;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+a:hover .label {
+    color: #F5F5F5;
+}
+
+a:hover .label::after {
+    opacity: 1;
+}
+
+a {
+    background: transparent;
+    border: none;
+    padding: 0;
+    width: 79px;
+    height: 38px;
+    text-decoration: none;
+    display: inline-block;
+}
