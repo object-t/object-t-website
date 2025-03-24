@@ -1,0 +1,10 @@
+{
+  "common": {
+    "button": "ボタン"
+  },
+  "card": {
+    "memberCard": {
+      "stack": "得意技術"
+    }
+  }
+}
