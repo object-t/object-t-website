@@ -10,6 +10,7 @@ import {
 import 'devicon/devicon.min.css';
 import type { Route } from "./+types/root";
 import "./app.css";
+import "./i18n/config";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },

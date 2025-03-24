@@ -1,0 +1,10 @@
+{
+  "common": {
+    "button": "Button"
+  },
+  "card": {
+    "memberCard": {
+      "stack": "Stacks"
+    }
+  }
+}

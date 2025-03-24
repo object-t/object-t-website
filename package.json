@@ -13,10 +13,12 @@
   "dependencies": {
     "@react-router/node": "^7.3.0",
     "@react-router/serve": "^7.3.0",
+    "i18next": "^24.2.3",
     "devicon": "^2.16.0",
     "isbot": "^5.1.17",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-i18next": "^15.4.1",
     "react-router": "^7.3.0"
   },
   "devDependencies": {
