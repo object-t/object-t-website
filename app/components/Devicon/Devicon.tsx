@@ -6,11 +6,26 @@ export interface DeviconProps {
   tooltip?: 'enable' | 'disable';
   color?: string;
   size?: string;
-  className?: string;
 }
 
 const abbreviation: Record<string, string> = {
   "aws": "amazonwebservices",
+}
+
+const parseIconClass = (icon: string): Record<'name' | 'iconClass', string> => {
+  const parts = icon.replace(/^devicon-/, '').split("-");
+
+  const name = parts[0];
+  const lowerName = name.toLocaleLowerCase();
+
+  const rest = parts.slice(1);
+  const style = `-${rest.find(part => ['plain', 'original'].includes(part)) ?? 'plain'}`;
+  const suffix = rest.includes('wordmark') ? '-wordmark' : '';
+
+  return {
+    name: name,
+    iconClass: `devicon-${abbreviation[lowerName] ?? lowerName}${style}${suffix}`
+  };
 }
 
 export const Devicon = ({
@@ -18,13 +33,12 @@ export const Devicon = ({
   tooltip = 'enable',
   color = "var(--based-color)",
   size = "20px",
-  className = "",
   ...props
 }: DeviconProps) => {
-  const lowerIcon = icon.toLocaleLowerCase();
+  const {name, iconClass} = parseIconClass(icon);
   const Icon = (
     <i
-      className={`devicon-${abbreviation[lowerIcon] ?? lowerIcon}-plain ${className}`}
+      className={iconClass}
       style={{ color, fontSize: size }}
       {...props}
     />
@@ -33,7 +47,7 @@ export const Devicon = ({
   return (
     (tooltip === 'disable') ?
     Icon :
-    <Tooltip content={icon}>
+    <Tooltip content={name}>
       {Icon}
     </Tooltip>
   );
