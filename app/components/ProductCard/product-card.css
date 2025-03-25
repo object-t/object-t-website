@@ -1,0 +1,84 @@
+.product-card-container {
+  width: 480px;
+  height: 700px;
+  background-color: var(--accent-color);
+}
+
+.product-header-container {
+  width: 480px;
+  height: 220px;
+}
+
+.product-title-container {
+  height: 80px;
+  width: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-title-container h1 {
+  font-size: 36px;
+}
+
+.product-stack-container {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px
+}
+
+.product-description-container {
+  width: 420px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.product-description-container p {
+  color: var(--grey-text-color);
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin:10px 0 30px;
+}
+
+.repo-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  height: 70px;
+}
+
+.repo-info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: 150px;
+}
+
+.repo-info-item::after {
+  content: "";
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 1px;
+  background-color: #ccc;
+}
+
+.repo-info-item:last-child::after {
+  display: none;
+}
+
+.repo-info-number {
+  font-size: 48px;
+  color: var(--grey-text-color);
+}
