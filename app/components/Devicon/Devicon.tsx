@@ -21,9 +21,10 @@ export const Devicon = ({
   className = "",
   ...props
 }: DeviconProps) => {
+  const lowerIcon = icon.toLocaleLowerCase();
   const Icon = (
     <i
-      className={`devicon-${abbreviation[icon] ?? icon}-plain ${className}`}
+      className={`devicon-${abbreviation[lowerIcon] ?? lowerIcon}-plain ${className}`}
       style={{ color, fontSize: size }}
       {...props}
     />
