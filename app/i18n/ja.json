@@ -8,7 +8,9 @@
       "hackathon": "ハッカソン",
       "recruitment": "募集",
       "urgent": "緊急"
-    }
+    },
+    "detail": "詳細",
+    "list": "一覧"
   },
   "card": {
     "memberCard": {
