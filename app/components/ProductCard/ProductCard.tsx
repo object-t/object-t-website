@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import { Devicon } from "../Devicon/Devicon"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
@@ -26,8 +25,6 @@ export const ProductCard = ({
   pullRequests,
   ...props
 }: ProductCardProps) => {
-  const { t } = useTranslation();
-  console.log(t);
   return (
     <div
       className="product-card-container"
