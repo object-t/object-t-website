@@ -1,5 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { Devicon } from "../Devicon/Devicon"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-regular-svg-icons";
+import { faCodeBranch, faCodePullRequest } from "@fortawesome/free-solid-svg-icons";
+
 import "./product-card.css"
 
 export interface ProductCardProps {
@@ -18,10 +22,12 @@ export const ProductCard = ({
   stacks,
   description,
   stars,
-  forks,
+  commits,
   pullRequests,
   ...props
 }: ProductCardProps) => {
+  const { t } = useTranslation();
+  console.log(t);
   return (
     <div
       className="product-card-container"
@@ -51,15 +57,15 @@ export const ProductCard = ({
       <div className="repo-info-container">
         <div className="repo-info-item">
           <i className="fa-regular fa-star"></i>
-          <div className="repo-info-icon"><i className="fa-solid fa-coffee"></i></div>
+          <div className="repo-info-icon"><FontAwesomeIcon icon={faStar} style={{ color: "#9D9F9F", fontSize: 22 }} /></div>
           <div className="repo-info-number">{stars}</div>
         </div>
         <div className="repo-info-item">
-          <div className="repo-info-icon">⭐️</div>
-          <div className="repo-info-number">{forks}</div>
+          <div className="repo-info-icon"><FontAwesomeIcon icon={faCodeBranch} style={{ color: "#9D9F9F", fontSize: 22 }} /></div>
+          <div className="repo-info-number">{commits}</div>
         </div>
         <div className="repo-info-item">
-          <div className="repo-info-icon">⭐️</div>
+          <div className="repo-info-icon"><FontAwesomeIcon icon={faCodePullRequest} style={{ color: "#9D9F9F", fontSize: 22 }} /></div>
           <div className="repo-info-number">{pullRequests}</div>
         </div>
       </div>
