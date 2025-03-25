@@ -19,6 +19,7 @@
 
 .product-title-container h1 {
   font-size: 36px;
+  color: var(--main-text-color);
 }
 
 .product-stack-container {
