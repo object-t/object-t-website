@@ -12,7 +12,7 @@ export interface ProductCardProps {
   stacks: string[];
   description: string;
   stars: number;
-  forks: number;
+  commits: number;
   pullRequests: number;
 }
 
