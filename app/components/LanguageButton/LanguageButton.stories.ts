@@ -14,7 +14,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 
-export const WithCustomOnClick: Story = {
+export const Language: Story = {
     args: {
         icon: 'globe',
     },

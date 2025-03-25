@@ -1,25 +1,26 @@
-.label {
-    color: #F5F5F5;
-    text-decoration: none;
-    font-size: 30px;
-    line-height: 100%;
-    position: relative;
-    font-family: 'Tilt Warp', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+.language-label {
+    width: auto;
+    font-family: 'Tilt Warp';
     font-weight: 400;
-    display: inline-block;
-    letter-spacing: 0.05em;
-    text-align: center;
-    width: 35px;
-    height: 28px;
+    font-size: 30px;
+    line-height: 1;
+    color: #F5F5F5;
 }
 
-button {
-    background: transparent;
-    border: 1px solid #9D9F9F;
+.language-icon {
+    width: 34px;
+    height: 34px;
+}
+
+.language-button {
+    border: 1px solid #F5F5F5;
     border-radius: 5px;
-    padding: 0;
-    cursor: pointer;
     width: 144px;
     height: 55px;
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
