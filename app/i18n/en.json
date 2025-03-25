@@ -1,6 +1,11 @@
 {
   "common": {
-    "button": "Button"
+    "button": "Button",
+    "tags": {
+      "hackathon": "Hackathon",
+      "recruitment": "Recruitment",
+      "urgent": "Urgent"
+    }
   },
   "card": {
     "memberCard": {

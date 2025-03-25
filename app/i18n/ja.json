@@ -1,6 +1,11 @@
 {
   "common": {
-    "button": "ボタン"
+    "button": "ボタン",
+    "tags": {
+      "hackathon": "ハッカソン",
+      "recruitment": "募集",
+      "urgent": "緊急"
+    }
   },
   "card": {
     "memberCard": {
