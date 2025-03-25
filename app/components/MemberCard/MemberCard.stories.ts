@@ -19,7 +19,7 @@ export const LoggedIn: Story = {
     name: "Naoto Kido",
     role: "代表",
     description: "よわよわプログラマ",
-    stacks: ["kubernetes", "aws", "java", "go", "flutter"],
+    stacks: ["Kubernetes", "AWS", "Java", "Go", "Flutter"],
     headerImage: "https://pbs.twimg.com/profile_banners/1846395762277826560/1737992837/1500x500",
     iconImage: "https://avatars.githubusercontent.com/u/54303857",
     githubName: "naoido",
