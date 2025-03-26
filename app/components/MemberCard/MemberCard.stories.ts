@@ -14,12 +14,12 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const LoggedIn: Story = {
+export const Default: Story = {
   args: {
     name: "Naoto Kido",
     role: "代表",
     description: "よわよわプログラマ",
-    stacks: ["Kubernetes", "AWS", "Java", "Go", "Flutter"],
+    stacks: ["Kubernetes", "AWS", "Java", "Go-wordmark", "Flutter"],
     headerImage: "https://pbs.twimg.com/profile_banners/1846395762277826560/1737992837/1500x500",
     iconImage: "https://avatars.githubusercontent.com/u/54303857",
     githubName: "naoido",
