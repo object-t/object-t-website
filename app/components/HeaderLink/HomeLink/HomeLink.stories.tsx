@@ -11,7 +11,7 @@ const withRouter = (Story) => (
 );
 
 const meta = {
-    title: 'Common/HomeLink',
+    title: 'HeaderLink/HomeLink',
     component: HomeLink,
     tags: ['autodocs'],
     parameters: {

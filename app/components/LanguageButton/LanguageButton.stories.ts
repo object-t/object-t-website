@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { LanguageButton } from './LanguageButton';
 
 const meta = {
-    title: 'Common/LanguageButton',  
+    title: 'LanguageButton/LanguageButton',  
     component: LanguageButton,       
     tags: ['autodocs'],              
     parameters: {
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Language: Story = {
     args: {
-        icon: 'globe',
+        label: 'JP',
     },
 };

@@ -11,7 +11,7 @@ const withRouter = (Story) => (
 );
 
 const meta = {
-    title: 'Common/ProductLink',
+    title: 'HeaderLink/ProductLink',
     component: ProductLink,
     tags: ['autodocs'],
     parameters: {

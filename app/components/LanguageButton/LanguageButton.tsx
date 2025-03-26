@@ -2,11 +2,11 @@ import { useTranslation } from 'react-i18next';
 import './LanguageButton.css';
 
 export interface LanguageButtonProps {
-    icon: string;
+    label: string;
 }
 
 export const LanguageButton = ({
-    icon,
+    label,
     ...props
 }: LanguageButtonProps) => {
     const { t } = useTranslation();
@@ -25,7 +25,7 @@ export const LanguageButton = ({
                     />
                 </svg>
             </div>
-            <span className="language-label">{t("language")}</span>
+            <span className="language-label">{label || t("language")}</span>
         </button>
     );
 }

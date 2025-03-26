@@ -3,7 +3,7 @@ import { GithubLink } from './GithubLink';
 
 
 const meta = {
-    title: 'Common/GithubLink',
+    title: 'LinkedButton/GithubLink',
     component: GithubLink,
     tags: ['autodocs'],
     parameters: {

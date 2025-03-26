@@ -3,7 +3,7 @@ import { ListLink } from './ListLink';
 
 
 const meta = {
-    title: 'Common/ListLink',
+    title: 'LinkedButton/ListLink',
     component: ListLink,
     tags: ['autodocs'],
     parameters: {

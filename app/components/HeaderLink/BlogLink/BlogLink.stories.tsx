@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { BlogLink } from './BlogLink';
 import { BrowserRouter } from 'react-router-dom';
-import React from 'react';
 
 
 const withRouter = (Story) => (
@@ -11,7 +10,7 @@ const withRouter = (Story) => (
 );
 
 const meta = {
-    title: 'Common/BlogLink',
+    title: 'HeaderLink/BlogLink',
     component: BlogLink,
     tags: ['autodocs'],
     parameters: {

@@ -18,7 +18,7 @@ export const FigmaLink = ({
 }: FigmaLinkProps) => {
 
     const linkStyle = {
-        backgroundColor: style === "default" ? backgroundColor : color,
+        backgroundColor: style === "default" ? backgroundColor : "transparent",
         color: backgroundColor,
         ...(style === "outlined" ? {
             borderWidth: "0px 1px 1px 0px",

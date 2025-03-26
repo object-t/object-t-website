@@ -3,7 +3,7 @@ import { DetailLink } from './DetailLink';
 
 
 const meta = {
-    title: 'Common/DetailLink',
+    title: 'LinkedButton/DetailLink',
     component: DetailLink,
     tags: ['autodocs'],
     parameters: {

@@ -3,7 +3,7 @@ import { FigmaLink } from './FigmaLink';
 
 
 const meta = {
-    title: 'Common/FigmaLink',
+    title: 'LinkedButton/FigmaLink',
     component: FigmaLink,
     tags: ['autodocs'],
     parameters: {
