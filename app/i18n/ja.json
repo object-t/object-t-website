@@ -1,6 +1,9 @@
 {
+  "language": "JP",
   "common": {
     "button": "ボタン",
+    "detail": "詳細",
+    "list": "一覧",
     "tags": {
       "hackathon": "ハッカソン",
       "recruitment": "募集",
