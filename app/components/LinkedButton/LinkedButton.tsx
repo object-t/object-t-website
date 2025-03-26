@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import './LinkedButton.css';
@@ -19,7 +18,6 @@ export const LinkedButton = ({
     style = "default",
     ...props
 }: LinkedButtonProps) => {
-    const { t } = useTranslation();
 
     const linkStyle = {
         backgroundColor: style === "default" ? backgroundColor : "transparent",
