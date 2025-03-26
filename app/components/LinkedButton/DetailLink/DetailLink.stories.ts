@@ -15,8 +15,22 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 
-export const Detail: Story = {
+export const Default: Story = {
     args: {
-        url: 'https://www.google.com',//適当に変えてください
+        url: 'https://example.com',
+        label: '詳細',
+        style: 'default',
+        backgroundColor: 'var(--primery-color)',
+        color: 'var(--accent-color)'
+    },
+};
+
+export const Outlined: Story = {
+    args: {
+        url: 'https://example.com',
+        label: '詳細',
+        style: 'outlined',
+        backgroundColor: 'var(--primery-color)',
+        color: 'var(--accent-color)'
     },
 };

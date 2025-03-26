@@ -15,9 +15,22 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 
-export const Github: Story = {
+export const Default: Story = {
     args: {
+        url: 'https://github.com/naoido/neko-bot',
         label: 'Github',
-        url: 'https://github.com/naoido/neko-bot'
+        style: 'default',
+        backgroundColor: 'var(--primery-color)',
+        color: 'var(--accent-color)'
+    },
+};
+
+export const Outlined: Story = {
+    args: {
+        url: 'https://github.com/naoido/neko-bot',
+        label: 'Github',
+        style: 'outlined',
+        backgroundColor: 'var(--primery-color)',
+        color: 'var(--accent-color)'
     },
 };
