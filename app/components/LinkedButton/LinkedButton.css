@@ -1,18 +1,19 @@
 .Button-link {
-    width: 188px;
+    min-width: 188px;
     height: 45px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 40px;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .Button-label {
     font-family: 'Noto Sans JP';
-    width: 97px;
     height: 25px;
     font-weight: 400;
     font-size: 24px;
     line-height: 100%;
+    margin-right: 20px;
 }
