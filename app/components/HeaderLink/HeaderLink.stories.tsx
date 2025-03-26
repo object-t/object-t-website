@@ -22,7 +22,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Blog1: Story = {
+export const Default: Story = {
     args: {
         label: 'Blog',
         isActive: false,
@@ -30,7 +30,7 @@ export const Blog1: Story = {
     },
 };
 
-export const Blog2: Story = {
+export const HeaderLinkActive: Story = {
     args: {
         label: 'Blog',
         isActive: true,
@@ -38,50 +38,3 @@ export const Blog2: Story = {
     },
 };
 
-export const Home1: Story = {
-    args: {
-        label: 'Home',
-        isActive: false,
-        to: '/'
-    },
-};
-
-export const Home2: Story = {
-    args: {
-        label: 'Home',
-        isActive: true,
-        to: '/'
-    },
-};
-
-export const Member1: Story = {
-    args: {
-        label: 'Member',
-        isActive: false,
-        to: '/member'
-    },
-};
-
-export const Member2: Story = {
-    args: {
-        label: 'Member',
-        isActive: true,
-        to: '/member'
-    },
-};
-
-export const Product1: Story = {
-    args: {
-        label: 'Product',
-        isActive: false,
-        to: '/product'
-    },
-};
-
-export const Product2: Story = {
-    args: {
-        label: 'Product',
-        isActive: true,
-        to: '/product'
-    },
-};
