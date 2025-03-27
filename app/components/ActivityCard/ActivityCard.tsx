@@ -1,4 +1,6 @@
 import './activity-card.css';
+import { useTranslation } from "react-i18next"
+import { LinkedButton } from '../LinkedButton/LinkedButton';
 
 export interface ActivityCardProps {
   headerImage: string;
@@ -6,26 +8,27 @@ export interface ActivityCardProps {
   from: Date;
   to?: Date | null;
   description: string;
+  url: string;
 }
 
+const formatDate = (date: Date): string => {
+  const formatter = new Intl.DateTimeFormat('ja-JP', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+  return formatter.format(date);
+};
 export const ActivityCard = ({
   headerImage,
   title,
   from,
   to,
   description,
+  url,
   ...props
 }: ActivityCardProps) => {
-
-  const formatDate = (date: Date): string => {
-    const formatter = new Intl.DateTimeFormat('ja-JP', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
-    return formatter.format(date);
-  };
-
+  const { t } = useTranslation();
   const strFromData = formatDate(from);
   const strToData = to ? formatDate(to) : null;
 
@@ -36,8 +39,8 @@ export const ActivityCard = ({
     >
       <div
         className='activity-image'
-        style={{ backgroundImage: `url(${headerImage})` }}
       >
+        <img src={headerImage} />
       </div>
       <div className="activity-sub-container">
         <div className='activity-title-container'>
@@ -54,6 +57,9 @@ export const ActivityCard = ({
           <div className='activity-description-container'>
             <p>{description}</p>
           </div>
+        </div>
+        <div className="activity-button-container">
+          <LinkedButton url={url} label={t("common.detail")} style="outlined" />
         </div>
       </div>
     </div >

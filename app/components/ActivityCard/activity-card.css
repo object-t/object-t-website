@@ -7,8 +7,13 @@
 
 .activity-image {
   flex: none;
+}
+
+.activity-image img {
   width: 400px;
   height: 400px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .activity-sub-container {
@@ -36,7 +41,7 @@
   transform: translateY(-50%);
   height: 1px;
   background-color: #808080;
-  margin: 0;
+  margin-left: -15px;
 }
 
 .activity-date-container {
@@ -54,4 +59,10 @@
   color: var(--grey-text-color);
   font-size: 24px;
   font-weight: bold; 
+}
+
+.activity-button-container {
+  margin-right: 40px;
+  display: flex;
+  justify-content: flex-end;
 }
