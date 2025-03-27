@@ -12,6 +12,10 @@ const meta = {
         variant: {
             control: 'select',
             options: ['home', 'section'],
+        },
+        align: {
+            control: 'select',
+            options: ['left', 'right'],
         }
     },
 } satisfies Meta<typeof Title>;
@@ -19,16 +23,19 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Home: Story = {
+export const HomeTitle: Story = {
     args: {
         label: 'Object<T>',
+        subLabel: '学生の未来をもっと「明るく」',
         variant: 'home',
     },
 };
 
-export const Section: Story = {
+export const SectionTitle: Story = {
     args: {
-        label: 'NOTICE',
+        label: 'ABOUT',
+        subLabel: '私たちについて',
         variant: 'section',
+        align: 'left',
     },
 };
