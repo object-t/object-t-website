@@ -18,7 +18,7 @@ export const NekoBot: Story = {
   args: {
     headerImage: "https://pbs.twimg.com/profile_banners/1846395762277826560/1737992837/1500x500",
     title: "Neko Bot",
-    stacks: ["Go", "Jenkins"],
+    stacks: ["Go-wordmark", "Jenkins"],
     description: "ねこbotは団体discordで運用しているbotです。\n団体内での情報共有や、AIによる質問返答、グループ管理の役割を担っています。",
     stars: 1,
     commits: 142,
