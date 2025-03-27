@@ -1,0 +1,40 @@
+.title {
+    font-weight: 900;
+    color: #F5F5F5;
+    font-size: 96px;
+}
+
+.home-title {
+    width: 537px;
+    height: 115px;
+}
+
+.section-title {
+    width: 419px;
+    height: 115px;
+}
+
+.t-highlight {
+    color: #1E89E0;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title-container-center {
+    align-items: center;
+    text-align: center;
+}
+
+.title-container-left {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.title-container-right {
+    align-items: flex-end;
+    text-align: right;
+}
