@@ -2,8 +2,12 @@ import { Devicon } from "../Devicon/Devicon"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
 import { faCodeBranch, faCodePullRequest } from "@fortawesome/free-solid-svg-icons";
+import { LinkedButton } from "../LinkedButton/LinkedButton";
+import type { LinkedButtonProps } from "../LinkedButton/LinkedButton";
 
 import "./product-card.css"
+
+
 
 export interface ProductCardProps {
   headerImage: string;
@@ -13,6 +17,7 @@ export interface ProductCardProps {
   stars: number;
   commits: number;
   pullRequests: number;
+  linkedButtons?: LinkedButtonProps[];
 }
 
 export const ProductCard = ({
@@ -23,6 +28,7 @@ export const ProductCard = ({
   stars,
   commits,
   pullRequests,
+  linkedButtons,
   ...props
 }: ProductCardProps) => {
   return (
@@ -65,6 +71,13 @@ export const ProductCard = ({
           <div className="repo-info-icon"><FontAwesomeIcon icon={faCodePullRequest} style={{ color: "#9D9F9F", fontSize: 22 }} /></div>
           <div className="repo-info-number">{pullRequests}</div>
         </div>
+      </div>
+      <div className="product-button-container">
+        {linkedButtons?.map((prop, index) => (
+          <div className="product-button" key={prop.url || index}>
+            <LinkedButton url={prop.url} label={prop.label} style={prop.style} backgroundColor={prop.backgroundColor} color={prop.color} />
+          </div>
+        ))}
       </div>
     </div>
   )
