@@ -84,3 +84,14 @@
   font-size: 48px;
   color: var(--grey-text-color);
 }
+
+.product-button-container {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-button {
+  margin: 0 10px 0;
+}
