@@ -4,6 +4,27 @@
 }
 
 .home-title-container {
+  height: 1080px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-notice {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  gap: 30px;
+}
+
+.home-notice-divider {
+  border: none;
+  border-top: 1px solid #555;
+  margin: 50px auto;
+  width: 80%;
+  max-width: 1300px;
+  border-width: 3px;
 }
 
 .home-member {
@@ -16,8 +37,54 @@
 .home-member-card-layout {
   display: flex;
   justify-content: center;
+  margin-top: 8rem;
+}
+
+.home-product-card-layout {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-top: 8rem;
+}
+
+.home-product {
+  display: flex;
+  gap: 8rem;
 }
 
 .home-section-left {
-  margin-left: 8rem;
+  margin-left: 13rem;
 }
+
+.home-section-right {
+  margin-right: 13rem;
+}
+
+.home-about-title {
+  margin: 3rem 13rem 3rem;
+  font-size: 64px;
+  font-weight: bold;
+  border-left: 15px solid dodgerblue;
+  padding-left: 2rem;
+}
+
+.home-about-content {
+  margin: 2rem 13rem;
+  font-size: 40px;
+  color: var(--accent-color);
+}
+
+.home-activity-card-layout {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+}
+
+.home-activity {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  gap: 30px;
+}
+
