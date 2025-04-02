@@ -1,0 +1,23 @@
+.home-main-container {
+  background-color: var(--based-color);
+  width: 1920px;
+}
+
+.home-title-container {
+}
+
+.home-member {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 800px;
+}
+
+.home-member-card-layout {
+  display: flex;
+  justify-content: center;
+}
+
+.home-section-left {
+  margin-left: 8rem;
+}
