@@ -1,0 +1,16 @@
+import './{{pascalCase name}}.css';
+
+export interface {{pascalCase name}}Props {
+  hoge: string;
+}
+
+export const {{pascalCase name}} = ({
+  hoge,
+  ...props
+}: {{pascalCase name}}Props) => {
+  return (
+    <div {...props}>
+      {hoge}
+    </div>
+  );
+};
