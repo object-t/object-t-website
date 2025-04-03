@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     name: "Naoto Kido",
-    role: "代表",
+    role: "owner",
     description: "よわよわプログラマ",
     stacks: ["Kubernetes", "AWS", "Java", "Go-wordmark", "Flutter"],
     headerImage: "https://pbs.twimg.com/profile_banners/1846395762277826560/1737992837/1500x500",

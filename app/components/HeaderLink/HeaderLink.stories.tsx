@@ -1,13 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { BrowserRouter } from 'react-router-dom';
 import { HeaderLink } from './HeaderLink';
-
-
-const withRouter = (Story) => (
-    <BrowserRouter>
-        <Story />
-    </BrowserRouter>
-);
 
 const meta = {
     title: 'Common/HeaderLink',
@@ -15,8 +7,7 @@ const meta = {
     tags: ['autodocs'],
     parameters: {
         layout: 'centered',
-    },
-    decorators: [withRouter],
+    }
 } satisfies Meta<typeof HeaderLink>;
 
 export default meta;
@@ -24,17 +15,17 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
     args: {
-        label: 'Blog',
+        label: 'HOME',
         isActive: false,
-        to: '/'
+        to: '#home'
     },
 };
 
 export const HeaderLinkActive: Story = {
     args: {
-        label: 'Blog',
+        label: 'BLOG',
         isActive: true,
-        to: '/'
+        to: '/blog'
     },
 };
 
