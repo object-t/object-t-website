@@ -4,12 +4,21 @@ import './member-card.css';
 
 export interface MemberCardProps {
   name: string;
-  role: string;
+  role: TemplateRole;
   description: string,
   stacks: string[];
   headerImage: string;
   iconImage: string;
   githubName: string;
+}
+
+type TemplateRole = 'owner' | 'coowner' | 'backend' | 'frontend'; 
+
+const templateRole: Record<TemplateRole, string> = {
+  'owner': 'common.roles.owner',
+  'coowner': 'common.roles.coowner',
+  'backend': 'common.roles.backend',
+  'frontend': 'common.roles.frontend'
 }
 
 export const MemberCard = ({
@@ -40,7 +49,7 @@ export const MemberCard = ({
       </div>
       <div className='profile-container'>
         <h1 className='name'>{ name }</h1>
-        <h2 className='role'>{ role }</h2>
+        <h2 className='role'>{ t(templateRole[role]) }</h2>
         <p className='description'>{ description }</p>
         <p className='stack-title'>{ t("card.memberCard.stack") }</p>
         <div className='stack-container'>

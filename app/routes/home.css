@@ -1,0 +1,117 @@
+.home-main-container {
+  background-color: var(--based-color);
+  width: 100vw;
+}
+
+section {
+  padding: 120px 0;
+}
+
+.sub-title {
+  color: #9D9F9F;
+  font-weight: 900;
+}
+
+.home-sub-title {
+  height: 36px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.t-highlight {
+  color: #1E89E0;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.home-title-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-notice {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  gap: 30px;
+}
+
+.home-notice-divider {
+  border: none;
+  border-top: 1px solid #555;
+  margin: 50px auto;
+  width: 80%;
+  max-width: 1300px;
+  border-width: 3px;
+}
+
+.home-member {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 800px;
+}
+
+.home-member-card-layout {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+}
+
+.home-product-card-layout {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-top: 8rem;
+}
+
+.home-product {
+  display: flex;
+  gap: 8rem;
+}
+
+.home-section-left {
+  margin-left: 13rem;
+}
+
+.home-section-right {
+  margin-right: 13rem;
+}
+
+.home-about-title h1 {
+  margin: 3rem 13rem 3rem;
+  color: var(--accent-color);
+  font-size: 64px;
+  font-weight: bold;
+  border-left: 15px solid dodgerblue;
+  padding-left: 2rem;
+}
+
+.home-about-content {
+  margin: 2rem 13rem;
+  font-size: 40px;
+  color: var(--accent-color);
+}
+
+.home-activity-card-layout {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+}
+
+.home-activity {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  gap: 30px;
+}
+

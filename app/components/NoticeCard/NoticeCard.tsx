@@ -1,5 +1,5 @@
+import { Tag, type TagKind } from '../Tag/Tag';
 import './notice-card.css';
-import {Tag, type TagKind} from '../Tag/Tag';
 
 export interface NoticeCardProps {
     imageUrl: string;
@@ -25,11 +25,11 @@ export const NoticeCard = ({
                 <div className="notice-card-title-box">
                     <div className="notice-card-title-title-box">
                         <p className="notice-card-title">{title}</p>
-                    </div>
-                    <div className="notice-card-tags">
-                        {tags.map((tag, i) => (
-                            <Tag key={i} kind={tag} />
-                        ))}
+                        <div className="notice-card-tags">
+                            {tags.map((tag, i) => (
+                                <Tag key={i} kind={tag} />
+                            ))}
+                        </div>
                     </div>
                 </div>
                 <div>

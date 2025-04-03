@@ -4,24 +4,8 @@
     font-size: 96px;
 }
 
-.home-title {
-    width: 537px;
-    height: 115px;
-}
-
 .section-title {
-    width: 419px;
     height: 115px;
-}
-
-.t-highlight {
-    color: #1E89E0;
-}
-
-.title-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
 
 .title-container-center {
@@ -37,4 +21,15 @@
 .title-container-right {
     align-items: flex-end;
     text-align: right;
+}
+
+.sub-title {
+    color: #9D9F9F;
+    font-weight: 900;
+}
+
+.section-sub-title {
+    height: 43px;
+    font-size: 36px;
+    font-weight: 900;
 }

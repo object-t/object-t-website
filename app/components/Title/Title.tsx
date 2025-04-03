@@ -1,50 +1,43 @@
+import { useEffect, useState } from 'react';
+import i18n from '~/i18n/config';
 import './Title.css';
-import { SubTitle } from './SubTitle';
 
 export interface TitleProps {
     label: string;
     subLabel?: string;
-    variant?: 'home' | 'section';
     align?: 'left' | 'right'; 
 }
 
 export const Title = ({
     label,
     subLabel,
-    variant = 'section',
     align = 'left',
     ...props
 }: TitleProps) => {
-    const objectTPattern = /^Object<(T)>$/;
-    const match = label.match(objectTPattern);
+    const [isEnglish, setIsEnglish] = useState(i18n.language === 'en');
 
-    const renderTitle = () => {
-        if (match && match[1] === 'T') {
-            const beforeT = "Object<";
-            const t = "T";
-            const afterT = ">";
-
-            return (
-                <h1 {...props} className={`title ${variant}-title`}>
-                    {beforeT}<span className="t-highlight">{t}</span>{afterT}
-                </h1>
-            );
-        } else {
-            return (
-                <h1 {...props} className={`title ${variant}-title`}>
-                    {label}
-                </h1>
-            );
-        }
-    };
-
-    const containerClassName = `title-container ${variant === 'home' ? 'title-container-center' : `title-container-${align}`
-        }`;
+    useEffect(() => {
+        const handleLanguageChange = (lng: string) => {
+            setIsEnglish(lng === 'en');
+        };
+    
+        i18n.on('languageChanged', handleLanguageChange);
+    
+        return () => {
+          i18n.off('languageChanged', handleLanguageChange);
+        };
+      }, []);
 
     return (
-        <div className={containerClassName}>
-            {renderTitle()}
-            {subLabel && <SubTitle label={subLabel} variant={variant} />}
+        <div className={`title-container title-container-${align}`}>
+            <h1 {...props} className={`title section-title`}>
+                {label}
+            </h1>
+            {subLabel && !isEnglish &&
+                <p className={`sub-title section-sub-title`}>
+                    {subLabel}
+                </p>
+            }
         </div>
     );
 }

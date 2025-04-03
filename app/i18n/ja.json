@@ -1,13 +1,19 @@
 {
-  "language": "JP",
   "common": {
     "button": "ボタン",
     "detail": "詳細",
     "list": "一覧",
+    "subtitle": "学生の未来をもっと「明るく」",
     "tags": {
       "hackathon": "ハッカソン",
       "recruitment": "募集",
       "urgent": "緊急"
+    },
+    "roles": {
+      "owner": "代表",
+      "coowner": "副代表",
+      "backend": "バックエンド",
+      "frontend": "フロントエンド"
     }
   },
   "card": {

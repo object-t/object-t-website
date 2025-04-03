@@ -8,6 +8,7 @@
 
 .language-button {
     border: 1px solid #F5F5F5;
+    background-color: transparent;
     border-radius: 5px;
     width: 144px;
     height: 55px;
