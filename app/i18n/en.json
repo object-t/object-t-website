@@ -1,0 +1,24 @@
+{
+  "common": {
+    "button": "Button",
+    "subtitle": "Brighter Futures for Students",
+    "detail": "Detail",
+    "list": "List",
+    "tags": {
+      "hackathon": "Hackathon",
+      "recruitment": "Recruitment",
+      "urgent": "Urgent"
+    },
+    "roles": {
+      "owner": "Owner",
+      "coowner": "Co-Owner",
+      "backend": "Backend",
+      "frontend": "Frontend"
+    }
+  },
+  "card": {
+    "memberCard": {
+      "stack": "Stacks"
+    }
+  }
+}

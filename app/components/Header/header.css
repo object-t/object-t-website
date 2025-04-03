@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(0);
+  opacity: 1;
+  width: max-content;
+  position: fixed;
+  z-index: 999999;
+  top: 24px;
+  right: 48px;
+}
+
+.language-button {
+  cursor: pointer;
+  margin-left: 24px;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+}

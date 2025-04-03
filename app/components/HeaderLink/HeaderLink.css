@@ -1,0 +1,37 @@
+.label {
+    color: #9D9F9F;
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 100%;
+    position: relative;
+    font-weight: 900;
+    display: inline-block;
+    letter-spacing: 0.05em;
+    height: 38px;
+    text-align: center;
+    vertical-align: middle;
+		padding: 0 8px;
+    transition: color 0.3s ease, border 0.3s ease;
+}
+
+.active .label {
+	border-bottom: solid 1px var(--accent-color);
+}
+
+.active .label {
+    color: #F5F5F5;
+}
+
+.active .label::after {
+    opacity: 1;
+}
+
+a.Header-link {
+    background: transparent;
+    border: none;
+    padding: 0;
+    height: 38px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 10px;
+}
