@@ -80,7 +80,7 @@ export const Header = ({ headers }: HeaderProps) => {
             onClick={() => handleClick(header.to)} to={header.to}/>
         ))
       }
-      <LanguageButton label={'JP'} />
+      <LanguageButton label={'JP'} className={'language-button'}/>
     </header>
   );
 }

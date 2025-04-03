@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { ActivityCard, type ActivityCardProps } from "~/components/ActivityCard/ActivityCard";
+import { Footer } from "~/components/Footer/Footer";
 import { Header, type HeaderProps } from "~/components/Header/Header";
 import { MemberCard, type MemberCardProps } from "~/components/MemberCard/MemberCard";
 import { NoticeCard, type NoticeCardProps } from "~/components/NoticeCard/NoticeCard";
@@ -147,6 +148,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

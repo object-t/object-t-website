@@ -17,7 +17,7 @@ func main() {
 	}
 
 	commitMessage := string(input)
-	pattern := fmt.Sprintf("^(%s):\\s", strings.Join(allowedPrefixes, "|"))
+	pattern := fmt.Sprintf("^((%s):\\s|Merge)", strings.Join(allowedPrefixes, "|"))
 	re := regexp.MustCompile(pattern)
 
 	if !re.MatchString(commitMessage) {

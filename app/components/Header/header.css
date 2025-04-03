@@ -8,7 +8,12 @@ header {
   position: fixed;
   z-index: 999999;
   top: 12px;
-  right: 12px;
+  right: 24px;
+}
+
+.language-button {
+  cursor: pointer;
+  margin-left: 24px;
 }
 
 .hidden {
