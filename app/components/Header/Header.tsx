@@ -1,56 +1,86 @@
-import React from 'react';
 
-import { Button } from '../Button/Button';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { HeaderLink } from '../HeaderLink/HeaderLink';
+import { LanguageButton } from '../LanguageButton/LanguageButton';
 import './header.css';
 
-type User = {
-  name: string;
-};
-
 export interface HeaderProps {
-  user?: User;
-  onLogin?: () => void;
-  onLogout?: () => void;
-  onCreateAccount?: () => void;
+  headers: Record<'label' | 'to', string>[];
 }
 
-export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
-  <header>
-    <div className="storybook-header">
-      <div>
-        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-          <g fill="none" fillRule="evenodd">
-            <path
-              d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
-              fill="#FFF"
-            />
-            <path
-              d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
-              fill="#555AB9"
-            />
-            <path
-              d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z"
-              fill="#91BAF8"
-            />
-          </g>
-        </svg>
-        <h1>Acme</h1>
-      </div>
-      <div>
-        {user ? (
-          <>
-            <span className="welcome">
-              Welcome, <b>{user.name}</b>!
-            </span>
-            <Button size="small" onClick={onLogout} label="Log out" />
-          </>
-        ) : (
-          <>
-            <Button size="small" onClick={onLogin} label="Log in" />
-            <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
-          </>
-        )}
-      </div>
-    </div>
-  </header>
-);
+export const Header = ({ headers }: HeaderProps) => {
+  const [activeSection, setActiveSection] = useState<string>('');
+  const [isHidden, setIsHidden] = useState<boolean>(false);
+  const lastScrollY = useRef<number>(0);
+  const ignoreScroll = useRef<boolean>(false);
+  const ignoreTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleScroll = useCallback(() => {
+    if (ignoreScroll.current) return;
+
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+      setIsHidden(true);
+    } else {
+      setIsHidden(false);
+    }
+
+    lastScrollY.current = currentScrollY;
+
+    for (const header of headers) {
+      const sectionId = header.to.replace('#', '');
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 100 && rect.bottom > 100) {
+          setActiveSection(header.to);
+          break;
+        }
+      }
+    }
+  }, [headers]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
+
+  const handleClick = (to: string) => {
+    if (ignoreTimer.current) {
+      clearTimeout(ignoreTimer.current);
+    }
+
+    ignoreScroll.current = true;
+    setActiveSection(to);
+
+    ignoreTimer.current = setTimeout(() => {
+      ignoreScroll.current = false;
+      ignoreTimer.current = null;
+    }, 800);
+
+    const targetId = to.replace('#', '');
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+
+  return (
+    <header className={isHidden ? 'hidden' : ''}>
+      {
+        headers.map(header => (
+          <HeaderLink
+            key={header.to}
+            isActive={activeSection === header.to}
+            label={header.label}
+            onClick={() => handleClick(header.to)} to={header.to}/>
+        ))
+      }
+      <LanguageButton label={'JP'} />
+    </header>
+  );
+}

@@ -1,4 +1,6 @@
+import { useTranslation } from "react-i18next";
 import { ActivityCard, type ActivityCardProps } from "~/components/ActivityCard/ActivityCard";
+import { Header, type HeaderProps } from "~/components/Header/Header";
 import { MemberCard, type MemberCardProps } from "~/components/MemberCard/MemberCard";
 import { NoticeCard, type NoticeCardProps } from "~/components/NoticeCard/NoticeCard";
 import { ProductCard, type ProductCardProps } from "~/components/ProductCard/ProductCard";
@@ -13,12 +15,36 @@ export function meta({ }: Route.MetaArgs) {
   ];
 }
 
+const headers: HeaderProps = {
+  headers: [
+    {
+      'label': "HOME",
+      'to': "#home"
+    },
+    {
+      'label': "MEMBER",
+      'to': "#member"
+    },
+    {
+      'label': "PRODUCT",
+      'to': "#product"
+    },
+    {
+      'label': "ACTIVITY",
+      'to': "#activity"
+    },
+    {
+      'label': "BLOG",
+      'to': "#blog"
+    }
+  ]
+}
 
 const members: MemberCardProps[] = [
-  { name: "Naoto Kido", role: "代表", description: "よわよわプログラマー", stacks: ['Kubernetes', 'AWS', 'Java', 'Go-wordmark', 'Flutter'], headerImage: "https://pbs.twimg.com/profile_banners/1846395762277826560/1737992837/1500x500", iconImage: "https://avatars.githubusercontent.com/u/54303857", githubName: "naoido" },
-  { name: "Miura Naoki", role: "副代表", description: "ねこねこプログラマー", stacks: ['Go-wordmark', 'Javascript', 'Rust', 'Python', 'Neovim'], headerImage: "https://cdn.discordapp.com/attachments/1325818102960623729/1350589227477504051/IMG_0649.jpg?ex=67edb33c&is=67ec61bc&hm=52b978d0b55914eef3fb9015748e4b496f4bb16d207d648bdc97a28a05a82bc8&", iconImage: "https://avatars.githubusercontent.com/u/114989748", githubName: "thirdlf03" },
-  { name: "Takumi Matsubara", role: "フロントエンド", description: "うまうまプログラマー", stacks: ['Typescript', 'Swift', 'React'], headerImage: "https://cdn.discordapp.com/attachments/1325818102960623729/1350615961505366016/IMG_7620.jpg?ex=67edcc22&is=67ec7aa2&hm=7aaf0e07ab67d2484cb9c54fa09ebb329082606cad3218443a3985c4f2aac415&", iconImage: "https://avatars.githubusercontent.com/u/152017354", githubName: "AnnkoATAMA" },
-  { name: "Kentaro Doi", role: "バックエンド", description: "メンズコーチ", stacks: ['Javascript', 'Python', 'Php', 'Laravel', 'Typescript'], headerImage: "https://cdn.discordapp.com/attachments/1325818102960623729/1350718393178656799/jpg.jpg?ex=67ee2b88&is=67ecda08&hm=54e2abad70d172d4ec551a3a47fd89b2deefc2ee738f0debbe9f4a0543453bee&", iconImage: "https://avatars.githubusercontent.com/u/148222450", githubName: "kenta-afk" },
+  { name: "Naoto Kido", role: "owner", description: "よわよわプログラマー", stacks: ['Kubernetes', 'AWS', 'Java', 'Go-wordmark', 'Flutter'], headerImage: "https://pbs.twimg.com/profile_banners/1846395762277826560/1737992837/1500x500", iconImage: "https://avatars.githubusercontent.com/u/54303857", githubName: "naoido" },
+  { name: "Miura Naoki", role: "coowner", description: "ねこねこプログラマー", stacks: ['Go-wordmark', 'Javascript', 'Rust', 'Python', 'Neovim'], headerImage: "https://cdn.discordapp.com/attachments/1325818102960623729/1350589227477504051/IMG_0649.jpg?ex=67edb33c&is=67ec61bc&hm=52b978d0b55914eef3fb9015748e4b496f4bb16d207d648bdc97a28a05a82bc8&", iconImage: "https://avatars.githubusercontent.com/u/114989748", githubName: "thirdlf03" },
+  { name: "Takumi Matsubara", role: "frontend", description: "うまうまプログラマー", stacks: ['Typescript', 'Swift', 'React'], headerImage: "https://cdn.discordapp.com/attachments/1325818102960623729/1350615961505366016/IMG_7620.jpg?ex=67edcc22&is=67ec7aa2&hm=7aaf0e07ab67d2484cb9c54fa09ebb329082606cad3218443a3985c4f2aac415&", iconImage: "https://avatars.githubusercontent.com/u/152017354", githubName: "AnnkoATAMA" },
+  { name: "Kentaro Doi", role: "backend", description: "メンズコーチ", stacks: ['Javascript', 'Python', 'Php', 'Laravel', 'Typescript'], headerImage: "https://cdn.discordapp.com/attachments/1325818102960623729/1350718393178656799/jpg.jpg?ex=67ee2b88&is=67ecda08&hm=54e2abad70d172d4ec551a3a47fd89b2deefc2ee738f0debbe9f4a0543453bee&", iconImage: "https://avatars.githubusercontent.com/u/148222450", githubName: "kenta-afk" },
 ]
 
 const notices: NoticeCardProps[] = [
@@ -38,19 +64,24 @@ const activities: ActivityCardProps[] = [
   { headerImage: "/app/components/assets/logo.webp", title: "学生団体Object<T>結成", from: new Date("2024-03-01T12:00:00.000Z"), description: "念願の学生団体Object<T>を結成しました！これからたくさんの学生のスキルアップなどを目指した学生団体を目指し、この学生団体に入ってよかったと思っていただけるような団体を目指しがんばります！", url: "https://github.com/object-t/object-t-website" }
 ]
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <main className="home-main-container">
-      <div className="home-title-container">
+      <header>
+        <Header headers={headers.headers} />
+      </header>
+      <div className="home-title-container" id="home">
         <div className='title-container home-title-container'>
           <h1 className={`title home-center-title`}>
             Object&lt;<span className="t-highlight">T</span>&gt;
           </h1>
           <p className={`sub-title home-sub-title`}>
-            学生の未来をもっと「明るく」
+            {t("common.subtitle")}
           </p>
         </div>
       </div>
-      <section>
+      <section id="notice">
         <div className="home-section-left">
           <Title align="left" label="NOTICE" subLabel="お知らせ">
           </Title>
@@ -65,7 +96,7 @@ export default function Home() {
           <hr className="home-notice-divider" />
         </div>
       </section>
-      <section>
+      <section id="about">
         <div className="home-section-left">
           <Title align="left" label="ABOUT" subLabel="団体について">
           </Title>
@@ -77,7 +108,7 @@ export default function Home() {
           <p>昨今、小学校でのプログラミング教育の義務化や、共通テストで「情報」という科目が追加されるなど、プログラミングを触れる機会が増えてきています。しかし、プログラミングの”楽しさ”や”魅力”というのは深く知る機会がないと思います。<br />そこで私たちは、活動を通してプログラミングでしか得ることができない楽しみや感動を知ってもらい、プログラマーの第一歩を踏み出すきっかけになってもらうことを目指します。</p>
         </div>
       </section>
-      <section>
+      <section id="member">
         <div className="home-section-left">
           <Title align="left" label="MEMBER" subLabel="メンバー紹介">
           </Title>
@@ -90,7 +121,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
+      <section id="product">
         <div className="home-section-right">
           <Title align="right" label="PRODUCT" subLabel="成果物">
           </Title>
@@ -103,7 +134,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
+      <section id="activity">
         <div className="home-section-right">
           <Title align="right" label="ACTIVITY" subLabel="活動履歴">
           </Title>

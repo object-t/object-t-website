@@ -1,21 +1,33 @@
-import { Link } from 'react-router-dom';
 import './HeaderLink.css';
 
 export interface HeaderLinkProps {
-    isActive: boolean;
-    label: string;
-    to: string;
+  isActive: boolean;
+  label: string;
+  to: string;
+  onClick?: () => void;
 }
 
 export const HeaderLink = ({
-    isActive,
-    label,
-    to,
-    ...props
+  isActive,
+  label,
+  to,
+  onClick,
 }: HeaderLinkProps) => {
-    return (
-        <Link to={to} className={`Header-link ${isActive ? 'active' : ''}`} {...props}>
-            <span className="label">{label}</span>
-        </Link>
-    );
-}
+  return (
+    <a
+      href={to}
+      className={`Header-link ${isActive ? 'active' : ''}`}
+      onClick={(e) => {
+        e.preventDefault();
+        const id = to.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+        onClick?.();
+      }}
+    >
+      <span className="label">{label}</span>
+    </a>
+  );
+};

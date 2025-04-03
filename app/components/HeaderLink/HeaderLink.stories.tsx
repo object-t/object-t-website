@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { HeaderLink } from './HeaderLink';
 import { BrowserRouter } from 'react-router-dom';
+import { HeaderLink } from './HeaderLink';
 
 
 const withRouter = (Story) => (
