@@ -1,10 +1,10 @@
-import type { Route } from "./+types/home";
-import { Title } from "../components/Title/Title";
-import "./home.css";
-import { NoticeCard, type NoticeCardProps } from "~/components/NoticeCard/NoticeCard";
-import { MemberCard, type MemberCardProps } from "~/components/MemberCard/MemberCard";
-import { ProductCard, type ProductCardProps } from "~/components/ProductCard/ProductCard";
 import { ActivityCard, type ActivityCardProps } from "~/components/ActivityCard/ActivityCard";
+import { MemberCard, type MemberCardProps } from "~/components/MemberCard/MemberCard";
+import { NoticeCard, type NoticeCardProps } from "~/components/NoticeCard/NoticeCard";
+import { ProductCard, type ProductCardProps } from "~/components/ProductCard/ProductCard";
+import { Title } from "../components/Title/Title";
+import type { Route } from "./+types/home";
+import "./home.css";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -41,14 +41,18 @@ export default function Home() {
   return (
     <main className="home-main-container">
       <div className="home-title-container">
-        <div className="home-title">
-          <Title label="Object<T>" subLabel="学生の未来をもっと「明るく」" variant="home">
-          </Title>
+        <div className='title-container home-title-container'>
+          <h1 className={`title home-center-title`}>
+            Object&lt;<span className="t-highlight">T</span>&gt;
+          </h1>
+          <p className={`sub-title home-sub-title`}>
+            学生の未来をもっと「明るく」
+          </p>
         </div>
       </div>
-      <div>
+      <section>
         <div className="home-section-left">
-          <Title align="left" label="NOTICE" subLabel="お知らせ" variant="section">
+          <Title align="left" label="NOTICE" subLabel="お知らせ">
           </Title>
         </div>
         <div className="home-notice-container">
@@ -60,10 +64,10 @@ export default function Home() {
           </div>
           <hr className="home-notice-divider" />
         </div>
-      </div>
-      <div>
+      </section>
+      <section>
         <div className="home-section-left">
-          <Title align="left" label="ABOUT" subLabel="団体について" variant="section">
+          <Title align="left" label="ABOUT" subLabel="団体について">
           </Title>
         </div>
         <div className="home-about-title">
@@ -72,10 +76,10 @@ export default function Home() {
         <div className="home-about-content">
           <p>昨今、小学校でのプログラミング教育の義務化や、共通テストで「情報」という科目が追加されるなど、プログラミングを触れる機会が増えてきています。しかし、プログラミングの”楽しさ”や”魅力”というのは深く知る機会がないと思います。<br />そこで私たちは、活動を通してプログラミングでしか得ることができない楽しみや感動を知ってもらい、プログラマーの第一歩を踏み出すきっかけになってもらうことを目指します。</p>
         </div>
-      </div>
-      <div>
+      </section>
+      <section>
         <div className="home-section-left">
-          <Title align="left" label="MEMBER" subLabel="メンバー紹介" variant="section">
+          <Title align="left" label="MEMBER" subLabel="メンバー紹介">
           </Title>
         </div>
         <div className="home-member-card-layout">
@@ -85,10 +89,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
-      <div>
+      </section>
+      <section>
         <div className="home-section-right">
-          <Title align="right" label="PRODUCT" subLabel="成果物" variant="section">
+          <Title align="right" label="PRODUCT" subLabel="成果物">
           </Title>
         </div>
         <div className="home-product-card-layout">
@@ -98,10 +102,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
-      <div>
+      </section>
+      <section>
         <div className="home-section-right">
-          <Title align="right" label="ACTIVITY" subLabel="活動履歴" variant="section">
+          <Title align="right" label="ACTIVITY" subLabel="活動履歴">
           </Title>
         </div>
         <div className="home-activity-card-layout">
@@ -111,7 +115,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }

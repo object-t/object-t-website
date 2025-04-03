@@ -6,7 +6,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   plugins: [
     tailwindcss(), 
-    !process.env.VITEST && reactRouter(), 
+    !process.env.VITEST && [reactRouter()], 
     tsconfigPaths()
   ],
 });

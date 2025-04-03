@@ -1,10 +1,37 @@
 .home-main-container {
   background-color: var(--based-color);
-  width: 1920px;
+  width: 100vw;
 }
 
+section {
+  padding: 120px 0;
+}
+
+.sub-title {
+  color: #9D9F9F;
+  font-weight: 900;
+}
+
+.home-sub-title {
+  width: 440px;
+  height: 36px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.t-highlight {
+  color: #1E89E0;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
 .home-title-container {
-  height: 1080px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,8 +87,9 @@
   margin-right: 13rem;
 }
 
-.home-about-title {
+.home-about-title h1 {
   margin: 3rem 13rem 3rem;
+  color: var(--accent-color);
   font-size: 64px;
   font-weight: bold;
   border-left: 15px solid dodgerblue;

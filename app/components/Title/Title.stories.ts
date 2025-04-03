@@ -9,10 +9,6 @@ const meta = {
         layout: 'centered',
     },
     argTypes: {
-        variant: {
-            control: 'select',
-            options: ['home', 'section'],
-        },
         align: {
             control: 'select',
             options: ['left', 'right'],
@@ -26,8 +22,7 @@ type Story = StoryObj<typeof meta>;
 export const HomeTitle: Story = {
     args: {
         label: 'Object<T>',
-        subLabel: '学生の未来をもっと「明るく」',
-        variant: 'home',
+        subLabel: '学生の未来をもっと「明るく」'
     },
 };
 
@@ -35,7 +30,6 @@ export const SectionTitle: Story = {
     args: {
         label: 'ABOUT',
         subLabel: '私たちについて',
-        variant: 'section',
         align: 'left',
     },
 };
