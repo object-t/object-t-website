@@ -1,19 +1,43 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router';
 import { HeaderLink } from '../HeaderLink/HeaderLink';
 import { LanguageButton } from '../LanguageButton/LanguageButton';
 import './header.css';
 
-export interface HeaderProps {
-  headers: Record<'label' | 'to', string>[];
-}
+const headers: Headers = [
+  {
+    'label': "HOME",
+    'to': "#home"
+  },
+  {
+    'label': "MEMBER",
+    'to': "#member"
+  },
+  {
+    'label': "PRODUCT",
+    'to': "#product"
+  },
+  {
+    'label': "ACTIVITY",
+    'to': "#activity"
+  },
+  {
+    'label': "BLOG",
+    'to': "/blog"
+  }
+]
 
-export const Header = ({ headers }: HeaderProps) => {
+type Headers = Record<'label' | 'to', string>[];
+
+export const Header = () => {
   const [activeSection, setActiveSection] = useState<string>('');
   const [isHidden, setIsHidden] = useState<boolean>(false);
   const lastScrollY = useRef<number>(0);
   const ignoreScroll = useRef<boolean>(false);
   const ignoreTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const navigate = useNavigate();
 
   const handleScroll = useCallback(() => {
     if (ignoreScroll.current) return;
@@ -49,6 +73,16 @@ export const Header = ({ headers }: HeaderProps) => {
   }, [handleScroll]);
 
   const handleClick = (to: string) => {
+    if (!to.startsWith("#")) {
+      navigate(to);
+      return;
+    }
+
+    if (location.pathname !== '/') {
+      navigate(`/${to}`);
+      return;
+    }
+
     if (ignoreTimer.current) {
       clearTimeout(ignoreTimer.current);
     }

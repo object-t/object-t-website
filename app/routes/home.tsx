@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { ActivityCard, type ActivityCardProps } from "~/components/ActivityCard/ActivityCard";
 import { Footer } from "~/components/Footer/Footer";
-import { Header, type HeaderProps } from "~/components/Header/Header";
+import { Header } from "~/components/Header/Header";
 import { MemberCard, type MemberCardProps } from "~/components/MemberCard/MemberCard";
 import { NoticeCard, type NoticeCardProps } from "~/components/NoticeCard/NoticeCard";
 import { ProductCard, type ProductCardProps } from "~/components/ProductCard/ProductCard";
@@ -11,34 +11,15 @@ import "./home.css";
 
 export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "団体公式ホームページ | Object<T>" },
+    { name: "description", content: "学生団体「Object<T>」の公式ホームページです。" },
+    { property: "og:site_name", content: "Object<T>"},
+    { property: "og:title", content: "団体公式ホームページ | Object<T>" },
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: "https://object-t.com" },
+    { property: "og:image", content: "https://object-t.com/assets/images/ogp_image.jpg" },
+    { property: "og:description", content: "学生団体「Object<T>」の公式ホームページです。" },
   ];
-}
-
-const headers: HeaderProps = {
-  headers: [
-    {
-      'label': "HOME",
-      'to': "#home"
-    },
-    {
-      'label': "MEMBER",
-      'to': "#member"
-    },
-    {
-      'label': "PRODUCT",
-      'to': "#product"
-    },
-    {
-      'label': "ACTIVITY",
-      'to': "#activity"
-    },
-    {
-      'label': "BLOG",
-      'to': "#blog"
-    }
-  ]
 }
 
 const members: MemberCardProps[] = [
@@ -54,14 +35,14 @@ const notices: NoticeCardProps[] = [
 ]
 
 const products: ProductCardProps[] = [
-  { headerImage: "https://pbs.twimg.com/profile_banners/1846395762277826560/1737992837/1500x500", title: "ねこbot", stacks: ["Go-wordmark", "Jenkins"], description: "ねこbotは団体discordで運用しているbotです。団体内での情報共有や、AIによる質問返答、グループ管理の役割を担っています。", stars: 1, commits: 142, pullRequests: 75, linkedButtons: [{ label: "Github", url: "https://github.com/naoido/neko-bot" }] },
-  { headerImage: "https://pbs.twimg.com/profile_banners/1846395762277826560/1737992837/1500x500", title: "団体公式サイト", stacks: ["Cloudflare", "React", "Cloudflareworkers"], description: "団体公式のウェブサイトです。Reactで構成されており、Cloudfalre Workers使用し記事の更新などを行い、Cloudflare Pagesにデプロイしています。", stars: 2, commits: 86, pullRequests: 54, linkedButtons: [{ label: "Github", url: "https://github.com/object-t/object-t-website" }, { label: "Figma", url: "https://www.figma.com/design/YWBtX9qhd0QKOTY4a2SEWx" }] }
+  { headerImage: "https://pbs.twimg.com/profile_banners/1846395762277826560/1737992837/1500x500", title: "ねこbot", stacks: ["Go-wordmark", "ArgoCD"], description: "ねこbotは団体discordで運用しているbotです。団体内での情報共有や、AIによる質問返答、グループ管理の役割を担っています。", stars: 1, commits: 142, pullRequests: 75, linkedButtons: [{ label: "Github", url: "https://github.com/naoido/neko-bot" }] },
+  { headerImage: "https://pbs.twimg.com/profile_banners/1846395762277826560/1737992837/1500x500", title: "団体公式サイト", stacks: ["Cloudflare", "React", "Cloudflareworkers", "Storybook"], description: "団体公式のウェブサイトです。Reactで構成されており、Cloudfalre Workers使用し記事の更新などを行い、Cloudflare Pagesにデプロイしています。", stars: 2, commits: 86, pullRequests: 54, linkedButtons: [{ label: "Github", url: "https://github.com/object-t/object-t-website" }, { label: "Figma", url: "https://www.figma.com/design/YWBtX9qhd0QKOTY4a2SEWx" }] }
 ]
 
 const activities: ActivityCardProps[] = [
-  { headerImage: "https://pbs.twimg.com/media/GmZOyaFacAA4vCx?format=jpg&name=large", title: "複数名でのハッカソン参加", from: new Date("2025-03-17T12:00:00.000Z"), to: new Date("2025-03-19T12:00:00.000Z"), description: "今回は、メンバー5人でのハッカソンに参加をしました！1人のチームと、スキルアップを目指している4人の計2グループでの参加です！", url: "https://github.com/object-t/object-t-website" },
-  { headerImage: "https://pbs.twimg.com/media/GkyBWsiaoAA0nwH?format=jpg&name=medium", title: "2度目のハッカソン優勝", from: new Date("2025-02-26T12:00:00.000Z"), to: new Date("2024-02-27T12:00:00.000Z"), description: "今回も株式会社ハックツ様のハッカソンに参加してきました！株式会社ヌーラボ様のオフィスをお借りしてのハッカソン、そして年1回の野良ハッカソンだったのでとても楽しかったです！そして副代表のthirld03が優勝しました！！", url: "https://github.com/object-t/object-t-website" },
-  { headerImage: "https://pbs.twimg.com/media/Ge1P7h9bkAARNb9?format=jpg&name=medium", title: "ハックツハッカソン初優勝", from: new Date("2024-03-01T12:00:00.000Z"), to: new Date("2024-03-02T12:00:00.000Z"), description: "株式会社ハックツ様主催のハッカソン「アンキロカップ」にて最優秀賞を獲得しました!2日間のハッカソン期間中徹夜で仕上げ、気持ちを込めた作品だったので優勝できてとても嬉しかったです！！", url: "https://github.com/object-t/object-t-website" },
+  { headerImage: "https://pbs.twimg.com/media/GmZOyaFacAA4vCx?format=jpg&name=large", title: "複数名でのハッカソン参加", from: new Date("2025-03-17T12:00:00.000Z"), to: new Date("2025-03-19T12:00:00.000Z"), description: "今回は、メンバー5人でのハッカソンに参加をしました！1人のチームと、スキルアップを目指している4人の計2グループでの参加です！", url: "https://x.com/Hackz_team/status/1902294529446965727" },
+  { headerImage: "https://pbs.twimg.com/media/GkyBWsiaoAA0nwH?format=jpg&name=medium", title: "2度目のハッカソン優勝", from: new Date("2025-02-26T12:00:00.000Z"), to: new Date("2024-02-27T12:00:00.000Z"), description: "今回も株式会社ハックツ様のハッカソンに参加してきました！株式会社ヌーラボ様のオフィスをお借りしてのハッカソン、そして年1回の野良ハッカソンだったのでとても楽しかったです！そして副代表のthirld03が優勝しました！！", url: "https://x.com/Hackz_team/status/1895031776290185529" },
+  { headerImage: "https://pbs.twimg.com/media/Ge1P7h9bkAARNb9?format=jpg&name=medium", title: "ハックツハッカソン初優勝", from: new Date("2024-03-01T12:00:00.000Z"), to: new Date("2024-03-02T12:00:00.000Z"), description: "株式会社ハックツ様主催のハッカソン「アンキロカップ」にて最優秀賞を獲得しました!2日間のハッカソン期間中徹夜で仕上げ、気持ちを込めた作品だったので優勝できてとても嬉しかったです！！", url: "https://x.com/Hackz_team/status/1868237310086770791" },
   { headerImage: "/app/components/assets/logo.webp", title: "学生団体Object<T>結成", from: new Date("2024-03-01T12:00:00.000Z"), description: "念願の学生団体Object<T>を結成しました！これからたくさんの学生のスキルアップなどを目指した学生団体を目指し、この学生団体に入ってよかったと思っていただけるような団体を目指しがんばります！", url: "https://github.com/object-t/object-t-website" }
 ]
 export default function Home() {
@@ -69,9 +50,7 @@ export default function Home() {
 
   return (
     <main className="home-main-container">
-      <header>
-        <Header headers={headers.headers} />
-      </header>
+      <Header />
       <div className="home-title-container" id="home">
         <div className='title-container home-title-container'>
           <h1 className={`title home-center-title`}>
