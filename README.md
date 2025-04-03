@@ -40,6 +40,15 @@ $ npm run storybook
 $ npm run build
 ```
 
+## plopについて
+本プロジェクトでは、コンポーネントのテンプレートを自動生成するために `plop` を使用しています。
+
+### 使用方法
+```bash
+#plopの起動
+$ npx plop
+```
+
 # Git関連
 コミットやブランチを作成する際は以下のルールを守ってください。
 ## コミットメッセージ
@@ -58,6 +67,8 @@ $ npm run build
 - `make init`を実行することで、`.git/hooks`に`.githook/`内のファイルがビルドされます。
 ### commit-msg.go
 - コミットメッセージにバリデーションが追加されます。
+### pre-commit.go
+- コミット時にESLintが実行されます。
 ### post-checkout.go
 - ブランチ変更時にバリデーションが追加されます。
 - feature/{issue-id}のようになっている場合、checkoutしたときに以下のようにissue情報が出力されます。
