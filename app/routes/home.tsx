@@ -13,7 +13,7 @@ export function meta({ }: Route.MetaArgs) {
   return [
     { title: "団体公式ホームページ | Object<T>" },
     { name: "description", content: "学生団体「Object<T>」の公式ホームページです。" },
-    { property: "og:site_name", content: "Object<T>"},
+    { property: "og:site_name", content: "Object<T>" },
     { property: "og:title", content: "団体公式ホームページ | Object<T>" },
     { property: "og:type", content: "website" },
     { property: "og:url", content: "https://object-t.com" },
@@ -30,7 +30,7 @@ const members: MemberCardProps[] = [
 ]
 
 const notices: NoticeCardProps[] = [
-  { date: "開催日: 2025年5月12日(月)", title: "学内ハッカソン開催", description: "今回は学内のスキルアップを目指して学内ハッカソンを開催することになりました！詳細ページはこちらをクリック！", tags: ["hackathon", "recruitment"], imageUrl: "/app/components/assets/logo.webp" },
+  { date: "開催日: 2025年5月12日(月)", title: "学内ハッカソン開催", description: "今回は学内のスキルアップを目指して学内ハッカソンを開催することになりました！詳細ページはこちらをクリック！", tags: ["hackathon", "recruitment"], imageUrl: "/assets/logo.webp" },
   { date: "開催日: 2025年8月32日(月)", title: "LT会", description: "勉強したことをアウトプットするために、LT会を開催することにしました", tags: ["hackathon", "recruitment"], imageUrl: "https://avatars.githubusercontent.com/u/54303857" }
 ]
 
@@ -43,7 +43,7 @@ const activities: ActivityCardProps[] = [
   { headerImage: "https://pbs.twimg.com/media/GmZOyaFacAA4vCx?format=jpg&name=large", title: "複数名でのハッカソン参加", from: new Date("2025-03-17T12:00:00.000Z"), to: new Date("2025-03-19T12:00:00.000Z"), description: "今回は、メンバー5人でのハッカソンに参加をしました！1人のチームと、スキルアップを目指している4人の計2グループでの参加です！", url: "https://x.com/Hackz_team/status/1902294529446965727" },
   { headerImage: "https://pbs.twimg.com/media/GkyBWsiaoAA0nwH?format=jpg&name=medium", title: "2度目のハッカソン優勝", from: new Date("2025-02-26T12:00:00.000Z"), to: new Date("2024-02-27T12:00:00.000Z"), description: "今回も株式会社ハックツ様のハッカソンに参加してきました！株式会社ヌーラボ様のオフィスをお借りしてのハッカソン、そして年1回の野良ハッカソンだったのでとても楽しかったです！そして副代表のthirld03が優勝しました！！", url: "https://x.com/Hackz_team/status/1895031776290185529" },
   { headerImage: "https://pbs.twimg.com/media/Ge1P7h9bkAARNb9?format=jpg&name=medium", title: "ハックツハッカソン初優勝", from: new Date("2024-03-01T12:00:00.000Z"), to: new Date("2024-03-02T12:00:00.000Z"), description: "株式会社ハックツ様主催のハッカソン「アンキロカップ」にて最優秀賞を獲得しました!2日間のハッカソン期間中徹夜で仕上げ、気持ちを込めた作品だったので優勝できてとても嬉しかったです！！", url: "https://x.com/Hackz_team/status/1868237310086770791" },
-  { headerImage: "/app/components/assets/logo.webp", title: "学生団体Object<T>結成", from: new Date("2024-03-01T12:00:00.000Z"), description: "念願の学生団体Object<T>を結成しました！これからたくさんの学生のスキルアップなどを目指した学生団体を目指し、この学生団体に入ってよかったと思っていただけるような団体を目指しがんばります！", url: "https://github.com/object-t/object-t-website" }
+  { headerImage: "/assets/logo.webp", title: "学生団体Object<T>結成", from: new Date("2024-03-01T12:00:00.000Z"), description: "念願の学生団体Object<T>を結成しました！これからたくさんの学生のスキルアップなどを目指した学生団体を目指し、この学生団体に入ってよかったと思っていただけるような団体を目指しがんばります！", url: "https://github.com/object-t/object-t-website" }
 ]
 export default function Home() {
   const { t } = useTranslation();
@@ -82,7 +82,7 @@ export default function Home() {
           </Title>
         </div>
         <div className="home-about-title">
-          <h1>「Object」のような<br/>全ての出発地点になることを目指す</h1>
+          <h1>「Object」のような<br />全ての出発地点になることを目指す</h1>
         </div>
         <div className="home-about-content">
           <p>昨今、小学校でのプログラミング教育の義務化や、共通テストで「情報」という科目が追加されるなど、プログラミングを触れる機会が増えてきています。しかし、プログラミングの”楽しさ”や”魅力”というのは深く知る機会がないと思います。<br />そこで私たちは、活動を通してプログラミングでしか得ることができない楽しみや感動を知ってもらい、プログラマーの第一歩を踏み出すきっかけになってもらうことを目指します。</p>
