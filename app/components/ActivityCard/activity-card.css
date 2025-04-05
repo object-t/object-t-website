@@ -66,3 +66,27 @@
   display: flex;
   justify-content: flex-end;
 }
+
+@media (max-width: 1000px) {
+  .activity-container {
+    flex-direction: column;
+    width: 700px;
+    height: 700px
+  }
+
+  .activity-image {
+    height: 350px;
+  }
+
+  .activity-image img {
+    width: 700px;
+  }
+
+  .activity-sub-container {
+    background-color: var(--accent-color);
+    width: 700px;
+    height: 100px;
+  }
+
+
+}

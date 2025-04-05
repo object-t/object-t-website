@@ -76,3 +76,33 @@
 }
 
 
+@media (max-width: 1000px) {
+  .notice-card {
+    flex-direction: column;
+    width: 700px;
+    height: 600px;
+  }
+
+  .notice-image-box {
+    width: 100%;
+    height: 440px;
+  }
+
+  .notice-image-box img {
+    object-position: center;
+  }
+
+  .notice-text-box {
+    margin-left: 7px;
+    width: 100%;
+  }
+
+  .notice-card-title {
+    font-size: 30px;
+  }
+
+  .notice-card-description {
+    margin-right: 14px;
+  }
+
+}
