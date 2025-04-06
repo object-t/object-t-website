@@ -16,8 +16,24 @@ header {
   margin-left: 24px;
 }
 
-.hidden {
+.hidden header {
   opacity: 0;
   transform: translateY(-100%);
   pointer-events: none;
+}
+
+.mobile {
+  right: 0;
+  top: 0;
+  padding-top: 24px;
+  padding-right: 24px;
+}
+
+.hidden .mobile {
+  transform: translateY(0);
+}
+
+.bars {
+  font-size: 42px;
+  color: var(--accent-color);
 }

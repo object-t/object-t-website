@@ -1,4 +1,4 @@
-import './HeaderLink.css';
+import styles from './header-link.module.css';
 
 export interface HeaderLinkProps {
   isActive: boolean;
@@ -16,7 +16,7 @@ export const HeaderLink = ({
   return (
     <a
       href={to}
-      className={`Header-link ${isActive ? 'active' : ''}`}
+      className={[styles['header-link'], (isActive ? styles.active : '')].join(" ")}
       onClick={(e) => {
         e.preventDefault();
         const id = to.replace('#', '');
@@ -27,7 +27,7 @@ export const HeaderLink = ({
         onClick?.();
       }}
     >
-      <span className="label">{label}</span>
+      <span className={styles.label}>{label}</span>
     </a>
   );
 };

@@ -1,9 +1,13 @@
 
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router';
+import { useIsMobile } from '~/hooks/useIsMobile';
+import { Drawer } from '../Drawer/Drawer';
 import { HeaderLink } from '../HeaderLink/HeaderLink';
 import { LanguageButton } from '../LanguageButton/LanguageButton';
-import './header.css';
+import styles from './header.module.css';
 
 const headers: Headers = [
   {
@@ -33,6 +37,7 @@ type Headers = Record<'label' | 'to', string>[];
 export const Header = () => {
   const [activeSection, setActiveSection] = useState<string>('');
   const [isHidden, setIsHidden] = useState<boolean>(false);
+  const isMobile = useIsMobile();
   const lastScrollY = useRef<number>(0);
   const ignoreScroll = useRef<boolean>(false);
   const ignoreTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -104,17 +109,30 @@ export const Header = () => {
 
 
   return (
-    <header className={isHidden ? 'hidden' : ''}>
+    <div className={isHidden ? styles.hidden : ''}>
       {
-        headers.map(header => (
-          <HeaderLink
-            key={header.to}
-            isActive={activeSection === header.to}
-            label={header.label}
-            onClick={() => handleClick(header.to)} to={header.to}/>
-        ))
+        isMobile ?(
+          <header className={styles.mobile}>
+            <Drawer links={headers} onClick={(link) => handleClick(link)}>
+              <FontAwesomeIcon icon={faBars} className={`${styles.bars}`}/>
+            </Drawer>
+          </header>
+        ) : (
+          <header>
+          {
+            headers.map(header => (
+              <HeaderLink
+                key={header.to}
+                isActive={activeSection === header.to}
+                label={header.label}
+                onClick={() => handleClick(header.to)}
+                to={header.to}/>
+            ))
+          }
+          <LanguageButton className={styles['language-button']}/>
+        </header>
+        )
       }
-      <LanguageButton label={'JP'} className={'language-button'}/>
-    </header>
+    </div>
   );
 }
