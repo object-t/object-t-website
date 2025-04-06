@@ -9,8 +9,4 @@ export default defineConfig({
     !process.env.VITEST && [reactRouter()], 
     tsconfigPaths()
   ],
-  server: {
-    host: '0.0.0.0',
-    port: 5173, // 任意のポート
-  },
 });
