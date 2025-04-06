@@ -169,9 +169,6 @@ section {
     display: block;
   }
 
-  .home-title-container {
-  }
-
   .home-notice-divider {
     margin: 30px auto;
     border-width: 2px;
@@ -199,6 +196,7 @@ section {
 
   .home-section-left,
   .home-section-right {
+    transform: scale(0.7);
     display: flex;
     justify-content: center;
     margin-left: 0;
@@ -225,6 +223,10 @@ section {
   .home-activity {
     gap: 45px;
     margin: -45rem 0;
+  }
+
+  #activity {
+    overflow: hidden;
   }
 
 }

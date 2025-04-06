@@ -127,7 +127,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Footer />
+      <div className="home-footer">
+        <Footer />
+      </div>
     </main>
   );
 }
