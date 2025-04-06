@@ -1,3 +1,4 @@
+import { useIsMobile } from '~/hooks/useIsMobile';
 import styles from './Footer.module.css';
 
 const sitemap: Record<string, string> = {
@@ -37,27 +38,32 @@ const getList = (list: Record<string, string>) => {
 }
 
 export const Footer = ({...props}) => {
+const isMobile = useIsMobile()
+
   return (
     <footer {...props}>
-      <div className={`${styles.container} ${styles.title}`}>
-        <p>学生団体:Object&lt;T&gt;</p>
-        <p>所属: 福岡デザイン＆テクノロジー専門学校</p>
-      </div>
-      <div className={styles.container}>
-        <div className={styles.block}>
-          <p>サイトマップ</p>
-          {getList(sitemap)}
+      {
+        !isMobile && <>
+        <div className={`${styles.container} ${styles.title}`}>
+          <p>学生団体:Object&lt;T&gt;</p>
+          <p>所属: 福岡デザイン＆テクノロジー専門学校</p>
+        </div><div className={styles.container}>
+          <div className={styles.block}>
+            <p>サイトマップ</p>
+            {getList(sitemap)}
+          </div>
+          <div className={styles.block}>
+            <p>本サイトについて</p>
+            {getList(aboutSite)}
+          </div>
+          <div className={styles.block}>
+            <p>学校関連</p>
+            {getList(school)}
+          </div>
         </div>
-        <div className={styles.block}>
-          <p>本サイトについて</p>
-          {getList(aboutSite)}
-        </div>
-        <div className={styles.block}>
-          <p>学校関連</p>
-          {getList(school)}
-        </div>
-      </div>
-      <p className={styles.copy}>&copy; 学生団体 Object&lt;T&gt;. All rights reserved.</p>
+        </>
+      }
+      <p className={[styles.copy, isMobile && styles.mobile].join(" ")}>&copy; 学生団体 Object&lt;T&gt;. All rights reserved.</p>
     </footer>
   );
 };

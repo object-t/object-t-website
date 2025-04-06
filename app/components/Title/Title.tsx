@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import i18n from '~/i18n/config';
-import './Title.css';
+import styles from './title.module.css';
 
 export interface TitleProps {
     label: string;
@@ -29,12 +29,12 @@ export const Title = ({
       }, []);
 
     return (
-        <div className={`title-container title-container-${align}`}>
-            <h1 {...props} className={`title section-title`}>
+        <div className={[styles['title-container'], styles[`title-container-${align}`]].join(" ")}>
+            <h1 {...props} className={[styles['section-title'], styles['title']].join(" ")}>
                 {label}
             </h1>
-            {subLabel && !isEnglish &&
-                <p className={`sub-title section-sub-title`}>
+            {subLabel &&
+                <p className={[styles['sub-title'], styles['section-subtitle'], (isEnglish && styles.hidden)].join(" ")}>
                     {subLabel}
                 </p>
             }
