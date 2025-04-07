@@ -111,7 +111,7 @@ section {
 .home-activity-card-layout {
   display: flex;
   justify-content: center;
-  margin-top: 0;
+  margin-top: 8rem;
 }
 
 .home-activity {
@@ -142,9 +142,9 @@ section {
   }
 
   .home-notice {
-    gap: 40px;
+    gap: 30px;
     transform: scale(0.5);
-    margin: -20rem 0;
+    margin: -19rem 0;
   }
 
   .home-member {
@@ -167,6 +167,7 @@ section {
 
   .home-activity-card-layout {
     display: block;
+    margin-top: 0;
   }
 
   .home-notice-divider {
@@ -196,7 +197,7 @@ section {
 
   .home-section-left,
   .home-section-right {
-    transform: scale(0.7);
+    transform: scale(0.75);
     display: flex;
     justify-content: center;
     margin-left: 0;
