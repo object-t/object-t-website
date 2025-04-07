@@ -71,7 +71,7 @@
 .notice-card-tags {
     display: flex;
     margin: 0 40px;
-    gap: 16px;
+    gap: 20px;
     align-items: center;
 }
 
@@ -80,12 +80,12 @@
   .notice-card {
     flex-direction: column;
     width: 700px;
-    height: 600px;
+    height: 580px;
   }
 
   .notice-image-box {
     width: 100%;
-    height: 440px;
+    height: 380px;
   }
 
   .notice-image-box img {
