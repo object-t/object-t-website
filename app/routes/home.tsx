@@ -23,10 +23,10 @@ export function meta({ }: Route.MetaArgs) {
 }
 
 const members: MemberCardProps[] = [
-  { name: "Naoto Kido", role: "owner", description: "よわよわプログラマー", stacks: ['Kubernetes', 'AWS', 'Java', 'Go-wordmark', 'Flutter'], headerImage: "https://pbs.twimg.com/profile_banners/1846395762277826560/1737992837/1500x500", iconImage: "https://avatars.githubusercontent.com/u/54303857", githubName: "naoido" },
-  { name: "Miura Naoki", role: "coowner", description: "ねこねこプログラマー", stacks: ['Go-wordmark', 'Javascript', 'Rust', 'Python', 'Neovim'], headerImage: "https://cdn.discordapp.com/attachments/1325818102960623729/1350589227477504051/IMG_0649.jpg?ex=67edb33c&is=67ec61bc&hm=52b978d0b55914eef3fb9015748e4b496f4bb16d207d648bdc97a28a05a82bc8&", iconImage: "https://avatars.githubusercontent.com/u/114989748", githubName: "thirdlf03" },
-  { name: "Takumi Matsubara", role: "frontend", description: "うまうまプログラマー", stacks: ['Typescript', 'Swift', 'React'], headerImage: "https://cdn.discordapp.com/attachments/1325818102960623729/1350615961505366016/IMG_7620.jpg?ex=67edcc22&is=67ec7aa2&hm=7aaf0e07ab67d2484cb9c54fa09ebb329082606cad3218443a3985c4f2aac415&", iconImage: "https://avatars.githubusercontent.com/u/152017354", githubName: "AnnkoATAMA" },
-  { name: "Kentaro Doi", role: "backend", description: "メンズコーチ", stacks: ['Javascript', 'Python', 'Php', 'Laravel', 'Typescript'], headerImage: "https://cdn.discordapp.com/attachments/1325818102960623729/1350718393178656799/jpg.jpg?ex=67ee2b88&is=67ecda08&hm=54e2abad70d172d4ec551a3a47fd89b2deefc2ee738f0debbe9f4a0543453bee&", iconImage: "https://avatars.githubusercontent.com/u/148222450", githubName: "kenta-afk" },
+  { name: "Naoto Kido", role: "owner", description: "よわよわプログラマー", stacks: ['Kubernetes', 'AWS', 'Java', 'Go-wordmark', 'Flutter'], headerImage: "/assets/images/headers/naoido.webp", iconImage: "https://avatars.githubusercontent.com/u/54303857", githubName: "naoido" },
+  { name: "Miura Naoki", role: "coowner", description: "ねこねこプログラマー", stacks: ['Go-wordmark', 'Javascript', 'Rust', 'Python', 'Neovim'], headerImage: "/assets/images/headers/thirdlf03.webp", iconImage: "https://avatars.githubusercontent.com/u/114989748", githubName: "thirdlf03" },
+  { name: "Takumi Matsubara", role: "frontend", description: "うまうまプログラマー", stacks: ['Typescript', 'Swift', 'React'], headerImage: "/assets/images/headers/annkoatama.webp", iconImage: "https://avatars.githubusercontent.com/u/152017354", githubName: "AnnkoATAMA" },
+  { name: "Kentaro Doi", role: "backend", description: "メンズコーチ", stacks: ['Javascript', 'Python', 'Php', 'Laravel', 'Typescript'], headerImage: "/assets/images/headers/kenta_afk.webp", iconImage: "https://avatars.githubusercontent.com/u/148222450", githubName: "kenta-afk" },
 ]
 
 const notices: NoticeCardProps[] = [
@@ -35,8 +35,8 @@ const notices: NoticeCardProps[] = [
 ]
 
 const products: ProductCardProps[] = [
-  { headerImage: "https://pbs.twimg.com/profile_banners/1846395762277826560/1737992837/1500x500", title: "ねこbot", stacks: ["Go-wordmark", "ArgoCD"], description: "ねこbotは団体discordで運用しているbotです。団体内での情報共有や、AIによる質問返答、グループ管理の役割を担っています。", stars: 1, commits: 142, pullRequests: 75, linkedButtons: [{ label: "Github", url: "https://github.com/naoido/neko-bot" }] },
-  { headerImage: "https://pbs.twimg.com/profile_banners/1846395762277826560/1737992837/1500x500", title: "団体公式サイト", stacks: ["Cloudflare", "React", "Cloudflareworkers", "Storybook"], description: "団体公式のウェブサイトです。Reactで構成されており、Cloudfalre Workers使用し記事の更新などを行い、Cloudflare Pagesにデプロイしています。", stars: 2, commits: 86, pullRequests: 54, linkedButtons: [{ label: "Github", url: "https://github.com/object-t/object-t-website" }, { label: "Figma", url: "https://www.figma.com/design/YWBtX9qhd0QKOTY4a2SEWx" }] }
+  { headerImage: "/assets/images/products/neko-bot.webp", title: "ねこbot", stacks: ["Go-wordmark", "ArgoCD"], description: "ねこbotは団体discordで運用しているbotです。団体内での情報共有や、AIによる質問返答、グループ管理の役割を担っています。", stars: 1, commits: 142, pullRequests: 75, linkedButtons: [{ label: "Github", url: "https://github.com/naoido/neko-bot" }] },
+  { headerImage: "/assets/images/products/website.webp", title: "団体公式サイト", stacks: ["Cloudflare", "React", "Cloudflareworkers", "Storybook"], description: "団体公式のウェブサイトです。Reactで構成されており、Cloudfalre Workers使用し記事の更新などを行い、Cloudflare Pagesにデプロイしています。", stars: 2, commits: 86, pullRequests: 54, linkedButtons: [{ label: "Github", url: "https://github.com/object-t/object-t-website" }, { label: "Figma", url: "https://www.figma.com/design/YWBtX9qhd0QKOTY4a2SEWx" }] }
 ]
 
 const activities: ActivityCardProps[] = [
