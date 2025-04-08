@@ -1,0 +1,73 @@
+.drawer {
+  z-index: 99999999999;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  background-color: #000000eb;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease-in;
+  overflow-y: auto;
+}
+
+.trigger {
+  opacity: 1;
+  padding-right: 12px;
+  transition: opacity 0.3s ease;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.button-container {
+  width: auto;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding-top: 24px;
+  padding-right: 24px;
+}
+
+.link-container {
+  padding-left: 24px;
+}
+
+.close {
+  color: var(--accent-color);
+  font-size: 52px;
+  cursor: pointer;
+}
+
+.lang {
+  color: var(--accent-color);
+  font-size: 52px;
+  cursor: pointer;
+}
+
+.drawer-opened {
+  opacity: 1;
+  transform: translateX(-100vw);
+}
+
+a , p{
+  color: var(--accent-color);
+  font-size: 24px;
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 42px;
+}
+
+li {
+  margin: 4% 0;
+}
+
+h2 {
+  color: var(--accent-color);
+  font-size: 42px;
+  font-weight: 200;
+}

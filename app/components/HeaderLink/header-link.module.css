@@ -10,8 +10,13 @@
     height: 38px;
     text-align: center;
     vertical-align: middle;
-		padding: 0 8px;
-    transition: color 0.3s ease, border 0.3s ease;
+    padding: 0 8px;
+    opacity: 1;
+    transition: color 0.3s ease, border 0.3s ease, opacity 0.3s ease;
+}
+
+.label:hover {
+    opacity: 0.8;
 }
 
 .active .label {
@@ -22,11 +27,7 @@
     color: #F5F5F5;
 }
 
-.active .label::after {
-    opacity: 1;
-}
-
-a.Header-link {
+a.header-link {
     background: transparent;
     border: none;
     padding: 0;

@@ -2,9 +2,13 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import i18n from '../../i18n/config';
-import './LanguageButton.css';
+import styles from './language-button.module.css';
 
-export const LanguageButton = ({ ...props }) => {
+export interface LanguageButton {
+  className?: string;
+}
+
+export const LanguageButton = ({ className = '', ...props }: LanguageButton) => {
   const [label, setLabel] = useState<'JP' | 'EN'>(i18n.language === 'ja' ? 'JP' : 'EN');
 
   const handleClick = () => {
@@ -25,11 +29,9 @@ export const LanguageButton = ({ ...props }) => {
   }, []);
 
   return (
-    <button {...props} className="language-button" onClick={handleClick}>
-      <div className="language-icon">
-        <FontAwesomeIcon icon={faGlobe} style={{ color: "#F5F5F5", fontSize: 34 }} />
-      </div>
-      <span className="language-label">{label}</span>
+    <button {...props} className={[styles['language-button'], className].join(" ")} onClick={handleClick}>
+      <FontAwesomeIcon icon={faGlobe} className={`${styles['language-icon']}`}/>
+      <span className={styles['language-label']}>{label}</span>
     </button>
   );
 };

@@ -50,10 +50,17 @@ footer {
   color: var(--accent-color);
 }
 
+.container:last-of-type {
+  padding-bottom: 40px;
+}
+
 .copy {
   display: block;
-  padding-top: 40px;
   text-align: center;
-  padding-bottom: 12px;
+  padding: 8px 0;
   letter-spacing: 1px;
+}
+
+.copy.mobile {
+  font-size: 12px;
 }
