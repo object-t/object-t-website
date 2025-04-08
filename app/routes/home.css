@@ -230,4 +230,7 @@ section {
     overflow: hidden;
   }
 
+  section:last-of-type {
+    padding-bottom: 120px;
+  }
 }

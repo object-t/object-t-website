@@ -109,16 +109,16 @@ export const Header = () => {
 
 
   return (
-    <div className={isHidden ? styles.hidden : ''}>
+    <div>
       {
         isMobile ?(
           <header className={styles.mobile}>
             <Drawer links={headers} onClick={(link) => handleClick(link)}>
-              <FontAwesomeIcon icon={faBars} className={`${styles.bars}`}/>
+              <FontAwesomeIcon icon={faBars} className={[`${styles.bars}`, isHidden && `${styles.hidden}`].join(" ")}/>
             </Drawer>
           </header>
         ) : (
-          <header>
+          <header className={isHidden ? styles.hidden : ''}>
           {
             headers.map(header => (
               <HeaderLink
