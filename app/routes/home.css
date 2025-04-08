@@ -1,3 +1,9 @@
+.title {
+  font-weight: 900;
+  color: #F5F5F5;
+  font-size: 96px;
+}
+
 .home-main-container {
   background-color: var(--based-color);
   width: 100vw;
@@ -30,6 +36,7 @@ section {
 
 
 .home-title-container {
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -115,3 +122,115 @@ section {
   gap: 30px;
 }
 
+@media (max-width: 1200px) {
+  section {
+    padding: 0;
+  }
+
+  .home-sub-title {
+    font-size: 22px;
+    font-weight: 500;
+    height: auto;
+  }
+
+  .title-container {
+    gap: 5px;
+  }
+
+  .title-container {
+    transform: scale(0.7);
+  }
+
+  .home-notice {
+    gap: 30px;
+    transform: scale(0.5);
+  }
+  
+  .home-member {
+    transform: scale(0.7);
+    margin: -16rem 0;
+  }
+
+  .home-product {
+    transform: scale(0.7);
+    margin: -10rem 0;
+  }
+
+  .home-product-card-layout {
+    display: block;
+  }
+
+  .home-activity {
+    transform: scale(0.5);
+  }
+
+  .home-activity-card-layout {
+    display: block;
+    margin-top: 0;
+  }
+
+  .home-notice-divider {
+    margin: 30px auto;
+    border-width: 2px;
+    width: 90%;
+  }
+
+  .home-member {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-member-card-layout,
+  .home-product-card-layout,
+  .home-activity-card-layout {
+    margin-top: 0;
+  }
+
+  .home-product {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .home-section-left,
+  .home-section-right {
+    transform: scale(0.75);
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .home-about-title {
+    margin: 2rem 1rem 1.5rem 1rem;
+  }
+
+  .home-about-title h1 {
+    font-size: 32px;
+    border-left-width: 8px;
+    padding-left: 1rem;
+    margin: 0;
+  }
+
+  .home-about-content {
+    font-size: 18px;
+    margin: 0 1rem 2rem 1rem;
+    line-height: 1.6;
+  }
+
+  .home-activity {
+    width: 100%;
+    gap: 45px;
+    margin: -45rem 0;
+  }
+
+  #activity {
+    overflow: hidden;
+  }
+
+  section:last-of-type {
+    padding-bottom: 120px;
+  }
+}

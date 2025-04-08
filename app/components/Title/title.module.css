@@ -33,3 +33,8 @@
     font-size: 36px;
     font-weight: 900;
 }
+
+.hidden {
+    opacity: 0;
+    user-select: none;
+}

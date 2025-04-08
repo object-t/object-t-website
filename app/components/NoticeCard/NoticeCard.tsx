@@ -2,7 +2,7 @@ import { Tag, type TagKind } from '../Tag/Tag';
 import './notice-card.css';
 
 export interface NoticeCardProps {
-    imageUrl: string;
+    imageUrl?: string;
     tags: TagKind[];
     title: string;
     description: string;
@@ -10,7 +10,7 @@ export interface NoticeCardProps {
 }
 
 export const NoticeCard = ({
-   imageUrl,
+   imageUrl = "/assets/logo.webp",
    tags,
    title,
    description,

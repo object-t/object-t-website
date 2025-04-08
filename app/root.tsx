@@ -35,6 +35,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>団体公式ホームページ | Object&lt;T&gt;</title>
+        <meta name="description" content="学生団体「Object&lt;T&gt;」の公式ホームページです。" />
+
+        <meta property="og:site_name" content="Object&lt;T&gt;" />
+        <meta property="og:title" content="団体公式ホームページ | Object&lt;T&gt;" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://object-t.com" />
+        <meta property="og:image" content="https://object-t.com/assets/images/ogp_image.jpg" />
+        <meta property="og:description" content="学生団体「Object&lt;T&gt;」の公式ホームページです。" />
         <Meta />
         <Links />
       </head>
