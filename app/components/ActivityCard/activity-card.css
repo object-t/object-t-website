@@ -67,7 +67,7 @@
   justify-content: flex-end;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .activity-container {
     flex-direction: column;
     width: 700px;

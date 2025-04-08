@@ -76,7 +76,7 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .notice-card {
     flex-direction: column;
     width: 700px;
