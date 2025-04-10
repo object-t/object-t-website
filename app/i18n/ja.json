@@ -1,5 +1,22 @@
 {
+  "header": {
+    "links": "リンク",
+    "sitemap": "サイトマップ",
+    "homepage": "ホームページ",
+    "notice": "お知らせ",
+    "activity": "活動報告",
+    "tech-blog": "技術ブログ",
+    "contact": "お問い合わせ",
+    "about": "本サイトについて",
+    "web-design": "Webデザイン(Figma)",
+    "source": "ソースコード(Github)",
+    "school": "学校関連",
+    "school-website": "学校ホームページ",
+    "student-organization": "学生団体",
+    "affiliation": "所属"
+  },
   "common": {
+    "school-name": "福岡デザイン＆テクノロジー専門学校",
     "button": "ボタン",
     "detail": "詳細",
     "list": "一覧",
@@ -18,7 +35,23 @@
   },
   "card": {
     "memberCard": {
+      "descriptions": {
+        "naoido": "よわよわプログラマ",
+        "thirdlf03": "ねこねこプログラマー",
+        "annkoatama": "",
+        "kenta-afk": ""
+      },
       "stack": "得意技術"
+    },
+    "products": {
+      "neko-bot": {
+        "title": "ねこBot",
+        "description": "ねこbotは団体discordで運用しているbotです。団体内での情報共有や、AIによる質問返答、グループ管理の役割を担っています。"
+      },
+      "website": {
+        "title": "団体サイト",
+        "description": "団体公式のウェブサイトです。Reactで構成されており、Cloudfalre Workers使用し記事の更新などを行い、Cloudflare Pagesにデプロイしています。"
+      }
     }
   }
 }

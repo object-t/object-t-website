@@ -50,7 +50,7 @@ export const MemberCard = ({
       <div className='profile-container'>
         <h1 className='name'>{ name }</h1>
         <h2 className='role'>{ t(templateRole[role]) }</h2>
-        <p className='description'>{ description }</p>
+        <p className='description'>{ t(description) }</p>
         <p className='stack-title'>{ t("card.memberCard.stack") }</p>
         <div className='stack-container'>
           {

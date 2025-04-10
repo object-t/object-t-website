@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { LanguageButton } from '../LanguageButton/LanguageButton';
 import styles from './drawer.module.css';
+import { useTranslation } from 'react-i18next';
 
 export interface DrawerProps {
   links: Record<'label' | 'to', string>[];
@@ -11,10 +12,10 @@ export interface DrawerProps {
 }
 
 const sitemap: Record<string, string> = {
-  "ホームページ": "/",
-  "技術ブログ": "/blog",
+  "header.homepage": "/",
+  "header.tech-blog": "/blog",
   "": "",
-  "お問い合わせ": "/",
+  "header.contact": "/",
 }
 
 export const Drawer = ({
@@ -24,6 +25,7 @@ export const Drawer = ({
   ...props
 }: DrawerProps) => {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
   
   useEffect(() => {
     document.documentElement.style.overflow = open ? 'hidden' : '';
@@ -40,7 +42,7 @@ export const Drawer = ({
           <LanguageButton className={styles.lang}/>
         </div>
         <div className={styles['link-container']}>
-          <h2>リンク</h2>
+          <h2>{t("header.links")}</h2>
           <ul>
           {
             links.map(link => (
@@ -66,14 +68,14 @@ export const Drawer = ({
             ))
           }
           </ul>
-          <h2>サイトマップ</h2>
+          <h2>{t("header.sitemap")}</h2>
           <ul>
             {
               Object.entries(sitemap).map(([label, url]) => label ? (
                 <a href={url} key={label}>
                   <li>
                       <p>
-                        {label}
+                        {t(label)}
                       </p>
                     </li>
                   </a>
