@@ -17,7 +17,7 @@ export function meta({ }: Route.MetaArgs) {
 
 const members: MemberCardProps[] = [
   { name: "Naoto Kido", role: "owner", description: "card.memberCard.descriptions.naoido", stacks: ['Kubernetes', 'AWS', 'Java', 'Go-wordmark', 'Flutter'], headerImage: "/assets/images/headers/naoido.webp", iconImage: "https://avatars.githubusercontent.com/u/54303857", githubName: "naoido" },
-  { name: "Miura Naoki", role: "coowner", description: "card.memberCard.descriptions.thirdlf03", stacks: ['Go-wordmark', 'Javascript', 'Rust', 'Python', 'Neovim'], headerImage: "/assets/images/headers/thirdlf03.webp", iconImage: "https://avatars.githubusercontent.com/u/114989748", githubName: "thirdlf03" },
+  { name: "Naoki Miura", role: "coowner", description: "card.memberCard.descriptions.thirdlf03", stacks: ['Go-wordmark', 'Javascript', 'Rust', 'Python', 'Neovim'], headerImage: "/assets/images/headers/thirdlf03.webp", iconImage: "https://avatars.githubusercontent.com/u/114989748", githubName: "thirdlf03" },
   { name: "Takumi Matsubara", role: "frontend", description: "card.memberCard.descriptions.annkoatama", stacks: ['Typescript', 'Swift', 'React'], headerImage: "/assets/images/headers/annkoatama.webp", iconImage: "https://avatars.githubusercontent.com/u/152017354", githubName: "AnnkoATAMA" },
   { name: "Kentaro Doi", role: "backend", description: "card.memberCard.descriptions.kenta-afk", stacks: ['Javascript', 'Python', 'php', 'Laravel', 'Typescript'], headerImage: "/assets/images/headers/kenta_afk.webp", iconImage: "https://avatars.githubusercontent.com/u/148222450", githubName: "kenta-afk" },
 ]
