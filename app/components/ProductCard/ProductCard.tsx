@@ -6,6 +6,7 @@ import { LinkedButton } from "../LinkedButton/LinkedButton";
 import type { LinkedButtonProps } from "../LinkedButton/LinkedButton";
 
 import "./product-card.css"
+import { useTranslation } from "react-i18next";
 
 
 
@@ -31,6 +32,8 @@ export const ProductCard = ({
   linkedButtons,
   ...props
 }: ProductCardProps) => {
+  const { t } = useTranslation();
+
   return (
     <div
       className="product-card-container"
@@ -42,7 +45,7 @@ export const ProductCard = ({
 
       <div className="product-title-container">
         <h1>
-          {title}
+          {t(title)}
         </h1>
       </div>
       <div className="product-stack-container">
@@ -55,7 +58,7 @@ export const ProductCard = ({
         ))}
       </div>
       <div className="product-description-container">
-        <p>{description}</p>
+        <p>{t(description)}</p>
       </div>
       <div className="repo-info-container">
         <div className="repo-info-item">

@@ -16,10 +16,10 @@ export function meta({ }: Route.MetaArgs) {
 }
 
 const members: MemberCardProps[] = [
-  { name: "Naoto Kido", role: "owner", description: "よわよわプログラマー", stacks: ['Kubernetes', 'AWS', 'Java', 'Go-wordmark', 'Flutter'], headerImage: "/assets/images/headers/naoido.webp", iconImage: "https://avatars.githubusercontent.com/u/54303857", githubName: "naoido" },
-  { name: "Miura Naoki", role: "coowner", description: "ねこねこプログラマー", stacks: ['Go-wordmark', 'Javascript', 'Rust', 'Python', 'Neovim'], headerImage: "/assets/images/headers/thirdlf03.webp", iconImage: "https://avatars.githubusercontent.com/u/114989748", githubName: "thirdlf03" },
-  { name: "Takumi Matsubara", role: "frontend", description: "うまうまプログラマー", stacks: ['Typescript', 'Swift', 'React'], headerImage: "/assets/images/headers/annkoatama.webp", iconImage: "https://avatars.githubusercontent.com/u/152017354", githubName: "AnnkoATAMA" },
-  { name: "Kentaro Doi", role: "backend", description: "メンズコーチ", stacks: ['Javascript', 'Python', 'Php', 'Laravel', 'Typescript'], headerImage: "/assets/images/headers/kenta_afk.webp", iconImage: "https://avatars.githubusercontent.com/u/148222450", githubName: "kenta-afk" },
+  { name: "Naoto Kido", role: "owner", description: "card.memberCard.descriptions.naoido", stacks: ['Kubernetes', 'AWS', 'Java', 'Go-wordmark', 'Flutter'], headerImage: "/assets/images/headers/naoido.webp", iconImage: "https://avatars.githubusercontent.com/u/54303857", githubName: "naoido" },
+  { name: "Naoki Miura", role: "coowner", description: "card.memberCard.descriptions.thirdlf03", stacks: ['Go-wordmark', 'Javascript', 'Rust', 'Python', 'Neovim'], headerImage: "/assets/images/headers/thirdlf03.webp", iconImage: "https://avatars.githubusercontent.com/u/114989748", githubName: "thirdlf03" },
+  { name: "Takumi Matsubara", role: "frontend", description: "card.memberCard.descriptions.annkoatama", stacks: ['Typescript', 'Swift', 'React'], headerImage: "/assets/images/headers/annkoatama.webp", iconImage: "https://avatars.githubusercontent.com/u/152017354", githubName: "AnnkoATAMA" },
+  { name: "Kentaro Doi", role: "backend", description: "card.memberCard.descriptions.kenta-afk", stacks: ['Javascript', 'Python', 'php', 'Laravel', 'Typescript'], headerImage: "/assets/images/headers/kenta_afk.webp", iconImage: "https://avatars.githubusercontent.com/u/148222450", githubName: "kenta-afk" },
 ]
 
 const notices: NoticeCardProps[] = [
@@ -28,8 +28,8 @@ const notices: NoticeCardProps[] = [
 ]
 
 const products: ProductCardProps[] = [
-  { headerImage: "/assets/images/products/neko-bot.webp", title: "ねこbot", stacks: ["Go-wordmark", "ArgoCD"], description: "ねこbotは団体discordで運用しているbotです。団体内での情報共有や、AIによる質問返答、グループ管理の役割を担っています。", stars: 1, commits: 142, pullRequests: 75, linkedButtons: [{ label: "Github", url: "https://github.com/naoido/neko-bot" }] },
-  { headerImage: "/assets/images/products/website.webp", title: "団体公式サイト", stacks: ["Cloudflare", "React", "Cloudflareworkers", "Storybook"], description: "団体公式のウェブサイトです。Reactで構成されており、Cloudfalre Workers使用し記事の更新などを行い、Cloudflare Pagesにデプロイしています。", stars: 2, commits: 86, pullRequests: 54, linkedButtons: [{ label: "Github", url: "https://github.com/object-t/object-t-website" }, { label: "Figma", url: "https://www.figma.com/design/YWBtX9qhd0QKOTY4a2SEWx" }] }
+  { headerImage: "/assets/images/products/neko-bot.webp", title: "card.products.neko-bot.title", stacks: ["Go-wordmark", "ArgoCD"], description: "card.products.neko-bot.description", stars: 1, commits: 142, pullRequests: 75, linkedButtons: [{ label: "Github", url: "https://github.com/naoido/neko-bot" }] },
+  { headerImage: "/assets/images/products/website.webp", title: "card.products.website.title", stacks: ["Cloudflare", "React", "Cloudflareworkers", "Storybook"], description: "card.products.website.description", stars: 2, commits: 86, pullRequests: 54, linkedButtons: [{ label: "Github", url: "https://github.com/object-t/object-t-website" }, { label: "Figma", url: "https://www.figma.com/design/YWBtX9qhd0QKOTY4a2SEWx" }] }
 ]
 
 const activities: ActivityCardProps[] = [

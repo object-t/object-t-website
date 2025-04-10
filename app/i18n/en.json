@@ -1,5 +1,22 @@
 {
+  "header": {
+    "links": "Links",
+    "sitemap": "Sitemap",
+    "homepage": "Homepage",
+    "notice": "Notice",
+    "activity": "Activity Report",
+    "tech-blog": "TechBlog",
+    "contact": "Contact us",
+    "about": "About website",
+    "web-design": "Web design(Figma)",
+    "source": "Source code(Github)",
+    "school": "Our school",
+    "school-website": "School website",
+    "student-organization": "Student Organization",
+    "affiliation": "Affiliation"
+  },
   "common": {
+    "school-name": "The FUKUOKA College of Design and Technology",
     "button": "Button",
     "subtitle": "Brighter Futures for Students",
     "detail": "Detail",
@@ -18,7 +35,23 @@
   },
   "card": {
     "memberCard": {
-      "stack": "Stacks"
+      "stack": "Stacks",
+      "descriptions": {
+        "naoido": "I'm probably a programmer.",
+        "thirdlf03": "hoge hoge programmer.",
+        "annkoatama": "UMA programmer",
+        "kenta-afk": "Men's coach"
+      }
+    },
+    "products": {
+      "neko-bot": {
+        "title": "Neko-Bot",
+        "description": "NekoBot is a Discord bot for our organization, supporting info sharing, AI-powered Q&A, and group management."
+      },
+      "website": {
+        "title": "Our-Homepage",
+        "description": "Official site built with React, using Cloudflare Workers for updates and deployed via Cloudflare Pages."
+      }
     }
   }
 }
