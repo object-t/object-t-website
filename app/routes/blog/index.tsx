@@ -36,7 +36,7 @@ export default function Blog(): JSX.Element {
         <h1>ブログ記事一覧</h1>
         <div className={styles.articleList}>
           {articles.map((article) => (
-            <a key={article.id} href={`/blog/${article.id}`} className={styles.articleItem}>
+            <a key={article.id} href={`/blog/${article.id.replace(".md", "")}`} className={styles.articleItem}>
               <img src={`https://raw.githubusercontent.com/object-t/object-t-blog/refs/heads/main/thumbnail/${article.thumbnail}`} alt={article.title} className={styles.thumbnail} />
               <div className={styles.textBox}>
                 <h2>{article.title}</h2>
