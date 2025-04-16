@@ -25,7 +25,7 @@ func main() {
 		os.Exit(0)
 	}
 
-	fileList := strings.Join(files, " ")
+	fileList := strings.ReplaceAll(strings.Join(files, " "), `$`, `\$`)
 	eslintCmdStr := fmt.Sprintf("npx eslint --fix %s", fileList)
 	var eslintCmd *exec.Cmd
 	if runtime.GOOS == "windows" {
