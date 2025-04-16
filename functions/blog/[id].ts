@@ -2,8 +2,14 @@ import type { PagesFunction } from '@cloudflare/workers-types'
 
 export const onRequestGet: PagesFunction = async (context) => {
   const url = new URL(context.request.url);
-  
-  if (/\.(js|css|png|jpg|jpeg|webp|woff2?|ttf|svg|ico|map)$/.test(url.pathname)) {
+  const pathname = url.pathname;
+
+  if (pathname.startsWith('/assets/') || /\.(js|css|png|jpg|jpeg|webp|woff2?|ttf|svg|ico|map)$/.test(pathname)) {
+    return fetch(context.request);
+  }
+
+  const accept = context.request.headers.get('accept') || '';
+  if (!accept.includes('text/html')) {
     return fetch(context.request);
   }
 
