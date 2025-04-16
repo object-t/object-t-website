@@ -8,9 +8,9 @@ export const onRequestGet: PagesFunction = async (context) => {
   }
 
   const { id } = context.params;
-  const baseHtmlRes = await fetch('https://object-t.com/index.html');
+  const baseHtmlRes = await context.env.ASSETS.fetch('/index.html');
   let html = await baseHtmlRes.text();
-
+  
   const ogTitle = `ブログ記事 ${id}`;
   const ogDescription = `これはブログ ${id} の説明です。`;
   const ogImage = `https://object-t.com/assets/logo.webp`;
