@@ -1,7 +1,4 @@
 {
   "include": ["/blog/*"],
-  "exclude": [
-    "/blog/*.*",
-    "/blog/assets/*"
-  ]
+  "exclude": ["/**"]
 }

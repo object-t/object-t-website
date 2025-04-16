@@ -35,7 +35,7 @@ export default function Blog(): JSX.Element {
 
     script.onload = async () => {
       await markdown.ready;
-      await fetch(`https://raw.githubusercontent.com/object-t/object-t-blog/refs/heads/main/articles/${id}`)
+      await fetch(`https://raw.githubusercontent.com/object-t/object-t-blog/refs/heads/main/articles/${id}.md`)
         .then((res) => res.text())
         .then((md) => {
           const html = markdown.parse(custom_markdown_convert(md));
