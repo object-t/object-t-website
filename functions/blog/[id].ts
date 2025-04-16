@@ -1,9 +1,9 @@
 import type { PagesFunction } from '@cloudflare/workers-types'
 
 export const onRequestGet: PagesFunction = async (context) => {
-  const accept = context.request.headers.get('accept') || '';
+  const url = new URL(context.request.url);
   
-  if (!accept.includes('text/html')) {
+  if (/\.(js|css|png|jpg|jpeg|webp|woff2?|ttf|svg|ico|map)$/.test(url.pathname)) {
     return fetch(context.request);
   }
 
