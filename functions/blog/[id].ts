@@ -1,4 +1,4 @@
-import { Response, type PagesFunction } from '@cloudflare/workers-types'
+import { type PagesFunction } from '@cloudflare/workers-types'
 
 export const onRequestGet: PagesFunction = async (context) => {
   const { id } = context.params
