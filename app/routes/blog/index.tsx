@@ -7,6 +7,7 @@ import { useIsMobile } from "~/hooks/useIsMobile";
 type Article = {
   id: string,
   title: string,
+  description: string,
   thumbnail: string,
   type: string,
   topics: string[],
@@ -40,6 +41,7 @@ export default function Blog(): JSX.Element {
               <img src={`https://raw.githubusercontent.com/object-t/object-t-blog/refs/heads/main/thumbnail/${article.thumbnail}`} alt={article.title} className={styles.thumbnail} />
               <div className={styles.textBox}>
                 <h2>{article.title}</h2>
+                <p className={styles.description}>{article.description}</p>
                 <div className={styles.details}>
                   <div className={styles.tagContainer}>
                   {
