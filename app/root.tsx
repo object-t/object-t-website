@@ -46,6 +46,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta property="og:description" content="学生団体「Object&lt;T&gt;」の公式ホームページです。" />
         <Meta />
         <Links />
+
+        <>
+          {/* Google tag (gtag.js) */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGVVRP7374"></script>
+          <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-HGVVRP7374');
+                `,
+              }}
+            />
+        </>
       </head>
       <body>
         {children}
