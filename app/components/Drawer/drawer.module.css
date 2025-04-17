@@ -21,6 +21,14 @@
   opacity: 0;
 }
 
+.isHome {
+  color: var(--accent-color);
+}
+
+.isOther {
+  color: var(--grey-text-color);
+}
+
 .button-container {
   width: auto;
   height: max-content;

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { LanguageButton } from '../LanguageButton/LanguageButton';
 import styles from './drawer.module.css';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router';
 
 export interface DrawerProps {
   links: Record<'label' | 'to', string>[];
@@ -26,6 +27,9 @@ export const Drawer = ({
 }: DrawerProps) => {
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
+
+  const location = useLocation();
+  const isHome = location.pathname === '/';
   
   useEffect(() => {
     document.documentElement.style.overflow = open ? 'hidden' : '';
@@ -33,13 +37,19 @@ export const Drawer = ({
 
   return (
     <div>
-      <div {...props} onClick={() => setOpen(true)} className={[open ? styles.hidden : '', styles.trigger].join(" ")}>
+      <div 
+        {...props} 
+        onClick={() => setOpen(true)} 
+        className={[open ? styles.hidden : '', styles.trigger, isHome ? styles.isHome : styles.isOther].join(" ")}
+      >
         {children}
       </div>
       <div className={[styles.drawer, open ? styles['drawer-opened']: ''].join(" ")}>
         <div className={styles['button-container']}>
           <FontAwesomeIcon icon={faXmark} className={`${styles.close}`} onClick={() => setOpen(false)}/>
-          <LanguageButton className={styles.lang}/>
+          {
+            isHome && <LanguageButton className={styles.lang}/>
+          }
         </div>
         <div className={styles['link-container']}>
           <h2>{t("header.links")}</h2>
