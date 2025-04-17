@@ -7,6 +7,9 @@ import styles from "./$id.module.scss"
 import { useParams } from "react-router";
 import { useIsMobile } from "~/hooks/useIsMobile";
 import { custom_markdown_convert } from "~/utils/convert";
+import { LinkedButton } from "~/components/LinkedButton/LinkedButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function Blog(): JSX.Element {
   const { id } = useParams();
@@ -89,7 +92,23 @@ export default function Blog(): JSX.Element {
           </div>
       }
       <div className={styles["article-container"]}>
+        <div className={styles.backButton}>
+          <LinkedButton url={"/blog"} label={"戻る"} buttonLocation="left" isNewTab={false}>
+            <FontAwesomeIcon icon={faArrowAltCircleLeft} style={{ fontSize: 22.33, paddingRight: 24, color: "white" }} />
+          </LinkedButton>
+        </div>
         <img src={thumbnail ? thumbnail : "/assets/images/headers/blog.webp"} className={styles["header-img"]} />
+        {
+          isMobile && 
+            <div className={[styles.side, styles.mobile].join(" ")}>
+              目次
+              <ul>
+                {
+                  table
+                }
+              </ul>
+            </div>
+        }
         <div 
           className={[styles.article, isMobile && styles.mobile].join(" ")}
           dangerouslySetInnerHTML={

@@ -36,5 +36,4 @@ header {
 .bars {
   font-size: 42px;
   transition: opacity 0.5s ease, transform 0.5s ease;
-  color: var(--accent-color);
 }

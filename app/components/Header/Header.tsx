@@ -2,7 +2,7 @@
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import { useIsMobile } from '~/hooks/useIsMobile';
 import { Drawer } from '../Drawer/Drawer';
 import { HeaderLink } from '../HeaderLink/HeaderLink';
@@ -41,6 +41,9 @@ export const Header = () => {
   const lastScrollY = useRef<number>(0);
   const ignoreScroll = useRef<boolean>(false);
   const ignoreTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   const navigate = useNavigate();
 
@@ -129,7 +132,9 @@ export const Header = () => {
                 to={header.to}/>
             ))
           }
-          <LanguageButton className={styles['language-button']}/>
+          {
+            isHome && <LanguageButton className={styles['language-button']}/>
+          }
         </header>
         )
       }
