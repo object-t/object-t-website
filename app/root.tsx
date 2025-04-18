@@ -43,6 +43,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://object-t.com" />
         <meta property="og:image" content="https://object-t.com/assets/images/ogp_image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta property="og:description" content="学生団体「Object&lt;T&gt;」の公式ホームページです。" />
         <Meta />
         <Links />
