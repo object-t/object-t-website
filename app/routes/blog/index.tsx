@@ -38,22 +38,23 @@ export default function Blog(): JSX.Element {
         <div className={styles.articleList}>
           {articles.map((article) => (
             <a key={article.id} href={`/blog/${article.id.replace(".md", "")}`} className={styles.articleItem}>
-              <img src={`https://raw.githubusercontent.com/object-t/object-t-blog/refs/heads/main/thumbnail/${article.thumbnail}`} alt={article.title} className={styles.thumbnail} />
+              <img 
+                src={`https://raw.githubusercontent.com/object-t/object-t-blog/refs/heads/main/thumbnail/${article.thumbnail ?? article.id.replace(".md", "") + ".jpeg"}`} 
+                alt={article.title} 
+                className={styles.thumbnail} 
+              />
               <div className={styles.textBox}>
                 <h2>{article.title}</h2>
-                <p className={styles.description}>{article.description}</p>
                 <div className={styles.details}>
+                  <div className={styles.info}>
+                    <p>{new Date(article.created_at).toLocaleDateString().replaceAll("/", "-")}</p>
+                  </div>
                   <div className={styles.tagContainer}>
                   {
                     article.topics.map(topic => (
                       <Tag kind={topic} className={styles.tag} key={topic} />
                     ))
                   }
-                  </div>
-                  <div className={styles.info}>
-                    <p>作成日: {new Date(article.created_at).toLocaleDateString()}</p>
-                    <p>タイプ: {article.type}</p>
-                    <p>著者: {article.author}</p>
                   </div>
                 </div>
               </div>
