@@ -39,7 +39,7 @@ export const onRequestGet: PagesFunction = async (context) => {
 
   const ogTitle = article?.title ?? "存在しない記事";
   const ogDescription = article?.description ?? "";
-  const ogImage = "https://raw.githubusercontent.com/object-t/object-t-blog/refs/heads/main/thumbnail/" + (article?.thumbnail ?? `${slag}.jpeg`);
+  const ogImage = "https://raw.githubusercontent.com/object-t/object-t-blog/refs/heads/main/thumbnail/" + (article?.thumbnail ?? `${slug}.jpeg`);
 
   html = html
     .replace(/<title>.*<\/title>/, `<title>${ogTitle}</title>`)
