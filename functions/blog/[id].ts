@@ -31,12 +31,13 @@ export const onRequestGet: PagesFunction = async (context) => {
 
   let html = await baseHtmlRes.text();
 
-  const slag = url.pathname;
+  const match = url.pathname.match(/^\/blog\/([^/]+)$/);
+  const slug = match?.[1];
   const res = await fetch(ARTICLES_JSON_URL);
   const articles: Article[] = await res.json();
-  const article = articles.find(a => a.id === `${slag}.md`) ?? null;
+  const article = articles.find(a => a.id === `${slug}.md`) ?? null;
 
-  const ogTitle = article?.title ?? "存在しません。";
+  const ogTitle = article?.title ?? "存在しない記事";
   const ogDescription = article?.description ?? "";
   const ogImage = "https://raw.githubusercontent.com/object-t/object-t-blog/refs/heads/main/thumbnail/" + (article?.thumbnail ?? `${slag}.jpeg`);
 
