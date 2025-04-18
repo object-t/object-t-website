@@ -8,3 +8,5 @@
 *storybook.log
 
 **.env
+
+/public/sitemap.xml
