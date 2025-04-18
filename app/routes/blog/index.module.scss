@@ -30,6 +30,11 @@
 
       margin-bottom: 42px;
 
+      .description {
+        font-size: 20px;
+        color: var(--grey-text-color) !important;
+      }
+
       img {
         height: 200px;
         width: 200px;
@@ -60,6 +65,7 @@
           display: flex;
           justify-content: end;
           .tag {
+            font-size: 16px !important;
             color: var(--accent-color) !important;
             background-color: #2199c9 !important;
           }
@@ -100,10 +106,16 @@
   }
   .articleItem {
     flex-direction: column;
-    height: 400px !important;
+    height: max-content !important;
+    min-height: 400px !important;
     max-width: 400px;
     min-width: 200px;
     margin: 0 12px;
+
+    .description {
+      padding-top: 24px;
+      padding-bottom: 64px;
+    }
 
     img {
       width: 100% !important;
