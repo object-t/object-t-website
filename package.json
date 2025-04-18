@@ -3,8 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "gen-sitemap": "node ./scripts/gen-sitemap.js",
+    "prebuild": "npm run gen-sitemap",
     "build": "react-router build",
-    "postbuild": "cp _routes.json build/client/_routes.json",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
