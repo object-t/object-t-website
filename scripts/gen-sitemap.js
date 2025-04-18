@@ -51,7 +51,7 @@ try {
       console.warn(`[WARN]   Lastmod is empty for ${id}. Skipping sitemap entry.`);
       continue;
     }
-      const lastmod = lastmodRaw;
+      const lastmod = new Date(lastmodRaw).toISOString();
       console.log(`[INFO]   Lastmod: ${lastmod}`);
 
       urlEntries.push(`
