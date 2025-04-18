@@ -38,7 +38,7 @@ export const ActivityCard = ({
       <div
         className='activity-image'
       >
-        <img src={headerImage} />
+        <img src={headerImage} alt={title} />
       </div>
       <div className="activity-sub-container">
         <div className='activity-title-container'>
