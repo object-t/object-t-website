@@ -11,7 +11,7 @@ interface Article {
   thumbnail: string;
 }
 
-const ARTICLES_JSON_URL = 'https://raw.githubusercontent.com/object-t/object-t-blog/main/articles.json';
+const ARTICLES_JSON_URL = 'https://raw.githubusercontent.com/object-t/object-t-blog/refs/heads/main/articles.json';
 
 export const onRequestGet: PagesFunction = async (context) => {
   const url = new URL(context.request.url);
