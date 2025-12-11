@@ -17,14 +17,13 @@ export function meta({ }: Route.MetaArgs) {
 
 const members: MemberCardProps[] = [
   { name: "Naoto Kido", role: "owner", description: "card.memberCard.descriptions.naoido", stacks: ['Kubernetes', 'AWS', 'Java', 'Go-wordmark', 'Flutter'], headerImage: "/assets/images/headers/naoido.webp", iconImage: "https://avatars.githubusercontent.com/u/54303857", githubName: "naoido" },
-  { name: "Naoki Miura", role: "coowner", description: "card.memberCard.descriptions.thirdlf03", stacks: ['Go-wordmark', 'Javascript', 'Rust', 'Python', 'Neovim'], headerImage: "/assets/images/headers/thirdlf03.webp", iconImage: "https://avatars.githubusercontent.com/u/114989748", githubName: "thirdlf03" },
   { name: "Takumi Matsubara", role: "frontend", description: "card.memberCard.descriptions.annkoatama", stacks: ['Typescript', 'Python', 'Java', 'Swift', 'React'], headerImage: "/assets/images/headers/annkoatama.webp", iconImage: "https://avatars.githubusercontent.com/u/152017354", githubName: "AnnkoATAMA" },
   { name: "Kentaro Doi", role: "backend", description: "card.memberCard.descriptions.kenta-afk", stacks: ['Python', 'php', 'Laravel', 'Typescript', 'Javascript'], headerImage: "/assets/images/headers/kenta_afk.webp", iconImage: "https://avatars.githubusercontent.com/u/148222450", githubName: "kenta-afk" },
 ]
 
 const notices: NoticeCardProps[] = [
-  { date: "公開日: 2025年4月9日(水)", title: "団体公式サイト開設", description: "団体公式サイト開設が公開されました。これから技術ブログの開設など順次アップデートしていく予定です！", tags: []},
-  
+  { date: "公開日: 2025年4月9日(水)", title: "団体公式サイト開設", description: "団体公式サイト開設が公開されました。これから技術ブログの開設など順次アップデートしていく予定です！", tags: [] },
+
 ]
 
 const products: ProductCardProps[] = [
